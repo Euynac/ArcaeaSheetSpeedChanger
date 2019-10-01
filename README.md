@@ -32,6 +32,7 @@
 因为现在自动生成的json bpm_base字段是乱填的188 似乎会影响谱面速度 打算根据官方songlist来填写相应字段（
 
 
+
 ## 更新历程
 > v3.2
 
@@ -50,6 +51,14 @@
 > v1.0
 
 谱面变速功能实现，变速0.5-0.95
+
+## 引用/参考项目/第三方库
+
+[SoxSharp](https://github.com/igece/SoxSharp "SoxSharp")
+
+[NAudio](https://github.com/naudio/NAudio "NAudio")
+
+[NAudio.Vorbis](https://github.com/naudio/Vorbis "NAudio.Vorbis")
 
 ## 吐槽
 
