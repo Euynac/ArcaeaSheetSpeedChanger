@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ArcaeaSpeedChanger.exe" version="2.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="favicon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ArcaeaSpeedChanger" version="3.2.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ArcaeaSpeedChanger.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC 清单选项
+             如果想要更改 Windows 用户帐户控制级别，请使用
+             以下节点之一替换 requestedExecutionLevel 节点。n
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            指定 requestedExecutionLevel 元素将禁用文件和注册表虚拟化。
+            如果你的应用程序需要此虚拟化来实现向后兼容性，则删除此
+            元素。
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ArcaeaSpeedChanger.exe" size="2593752">
+      <assemblyIdentity name="ArcaeaSpeedChanger" version="3.2.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>BV7DPZ5mIozpkOrGNJ3R3aWDupL/I/Xy/ZJ1+wILNaY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ArcaeaSpeedChanger.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SoundSpeedChange\SoundTouch.dll" size="146624">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>yi8NUgb37F4SvkeV7v1mXyBpTlCOwrWcg6DcZgQaAOk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\ChangeLog.txt" size="83796">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Sm1FrQaxwBWbkkXt1JTgbS8o7Hj4QL0mNSvmRB0u1G0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\libflac-8.dll" size="284258">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>LBVK6q0IXgE2G5Z63+yEtj23aoKkVoGz5s36y2CI42k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\libgcc_s_sjlj-1.dll" size="474449">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KvOB29XqGpoVAwexy6OhUDIaPD/wn7bq2buh6IDgOmQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\libgomp-1.dll" size="424566">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>nbuwyz8x3tf79RFBo5V4wLxcyFuD6baQhlemCDlIubo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\libid3tag-0.dll" size="73559">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TsjnTN1Io4ikH386ss6oEKFmH0fnm2M4GS8AA0HyCvA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\libogg-0.dll" size="27423">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MmIyW0O28kmDHMFUKDcqbao0zyRZ5m7QR9u9nwD0k3g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\libpng16-16.dll" size="211237">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ItRq23knaQ7usaJ/lUQQj3ocZr8drskPPEGqNuF2kg0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\libsox-3.dll" size="2349388">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JAp+R6QnSQh4YiDxuSNy7RtfKhwph0KS+tXmTxINhLQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\libssp-0.dll" size="73555">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ET2ni6BRSzlH4JiDdgAsTV94PWLVBY+ZJZdxZI8ukTg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\libvorbis-0.dll" size="171087">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>A64WJaR8ElXXDn1j7kLvJIPH4q3Joz0h9FeZ8yOlMLQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\libvorbisenc-2.dll" size="567578">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>O4Cdr5WLbe3u2+BekaCsAWsYyHGzPcmMco+LNECHQ4U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\libvorbisfile-3.dll" size="38203">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GhTYsHSfZoEdrLI7CT1U1P+IA21J/QF7DZiyHef57x0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\libwavpack-1.dll" size="157861">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>kSPnP4AWKah5HIDZ3FBB7iP38dnthRDy91gmkVmqJrg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\libwinpthread-1.dll" size="54131">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>A2r0ua7SCmvYsZk/LgpHicK6VVwAwLLXKm1qa4wT72g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\LICENSE.GPL.txt" size="18326">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ny4lCZPGIG+sZDgk4F5aDX0+CJXZ4Jpc5LErwmEK/BE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\README.txt" size="8073">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>q9QaTTNxbQiAZSgC+/ovOMLaKbBZGaFg9iwhVDQdfYU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\README.win32.txt" size="6010">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YtMnPCkBZIx0hE4YQ2UlvfUnojV0Qekahl8Ftbnyp2w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\sox.exe" size="213624">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4OPNxLzfu1uRrI9TsCSWTQkvibqQEwunSyI6HfEbVDk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\wget.exe" size="401408">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>pIrTNpWkTeiHu6jy8xdP2PsBpGoZ4+yQeLARhkfM9Zk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Euynac\Utility\SOX\zlib1.dll" size="85026">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GJM2oM8RMdamgegbQzha3nJS9yEd9Qd0dy2MjsQNX48=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="favicon.ico" size="67646">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>a3xX/LbYU7rd72jxniJvPaYDjFYSdbCmeDSvv3g5PlI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- 设计此应用程序与其一起工作且已针对此应用程序进行测试的
+           Windows 版本的列表。取消评论适当的元素，
+           Windows 将自动选择最兼容的环境。 -->
+      <!-- Windows Vista -->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}" />-->
+      <!-- Windows 7 -->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />-->
+      <!-- Windows 8 -->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}" />-->
+      <!-- Windows 8.1 -->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />-->
+      <!-- Windows 10 -->
+      <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
+    </application>
+  </compatibility>
+</asmv1:assembly>

@@ -1,0 +1,1958 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SoxSharp</name>
+    </assembly>
+    <members>
+        <member name="T:SoxSharp.Effects.ReverseEffect">
+            <summary>
+            Reverse the audio completely. Requires temporary file space to store the audio to be reversed.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.ReverseEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.ReverseEffect.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.Effects.ReverseEffect"/> instance to a set of command arguments to be passed to SoX.
+            (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply a Reverse effect.</returns>
+        </member>
+        <member name="T:SoxSharp.Effects.SpeedEffect">
+            <summary>
+            Adjust the audio speed (pitch and tempo together). Technically, the speed effect only changes the sample rate
+            information, leaving the samples themselves untouched. The rate effect is invoked automatically to resample to
+            the output sample rate, using its default quality/speed. For higher quality or higher speed resampling, in
+            addition to the speed effect, specify the rate effect with the desired quality option.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.SpeedEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.SpeedEffect.Factor">
+            <summary>
+            The ratio of the new speed to the old speed: greater than 1 speeds up, less than 1 slows down.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.SpeedEffect.AsCents">
+            <summary>
+            Interpret Factor as number of cents (i.e. 100ths of a semitone) by which the pitch (and tempo) should be
+            adjusted: greater than 0 increases, less than 0 decreases.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.SpeedEffect.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.Effects.SpeedEffect"/> instance to a set of command arguments to be passed to SoX.
+            (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply a Speed effect.</returns>
+        </member>
+        <member name="T:SoxSharp.Effects.TempoEffect">
+            <summary>
+            Change the audio playback speed but not its pitch.<para />
+            This effect uses the WSOLA algorithm. The audio is chopped up into segments which are then shifted in
+            the time domain and overlapped (cross-faded) at points where their waveforms are most similar as
+            determined by measurement of ‘least squares’.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.TempoEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.TempoEffect.Factor">
+            <summary>
+            Ratio of new tempo to the old tempo.<para />
+            A value of 1.1 speeds up the tempo by 10%, 0.9 slows it down by 10%.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.Effects.TempoEffect.UseTreeSearches">
+            <summary>
+            Use tree searches instead of linear searches to find the best overlapping points. <para />
+            This makes the effect work more quickly, but the result may not sound as good.
+            However, if you must improve the processing speed, this generally reduces the sound
+            quality less than reducing the search or overlap values.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.Effects.TempoEffect.Optimization">
+            <summary>
+            Calculates default value of Segment based on factor, and default Search and Overlap values based on Segment.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.TempoEffect.Segment">
+            <summary>
+            Algorithm’s segment size in milliseconds.<para/>
+            If no other flags are specified, the default value is 82 and is typically suited to making small changes to the tempo of music.
+            For larger changes (e.g. a factor of 2), 41 ms may give a better result.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.TempoEffect.Search">
+            <summary>
+            Audio length in milliseconds over which the algorithm will search for overlapping points.<para />
+            If no other flags are specified, the default value is 14.68. Larger values use more processing time and may or may not produce better results.<para />
+            A practical maximum is half the value of segment. Search can be reduced to cut processing time at the risk of degrading output quality.<para />
+            The −m, −s, and −l flags will cause the search default to be automatically adjusted based on segment.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.TempoEffect.Overlap">
+            <summary>
+            Segment overlap length in milliseconds.<para />
+            Default value is 12 but −m, −s, or −l flags automatically adjust overlap based on segment size.<para/>
+            Increasing overlap increases processing time and may increase quality. A practical maximum for overlap
+            is the value of search, with overlap typically being (at least) a little smaller than search.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.TempoEffect.#ctor(System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.TempoEffect"/> class.
+            </summary>
+            <param name="factor">Ratio of new tempo to the old tempo.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.TempoEffect.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.TempoEffect"/> class.
+            </summary>
+            <param name="factor">Ratio of new tempo to the old tempo.</param>
+            <param name="segment">Algorithm’s segment size in milliseconds.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.TempoEffect.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.TempoEffect"/> class.
+            </summary>
+            <param name="factor">Ratio of new tempo to the old tempo.</param>
+            <param name="segment">Algorithm’s segment size in milliseconds.</param>
+            <param name="search">Audio length in milliseconds over which the algorithm will search for overlapping points.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.TempoEffect.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.TempoEffect"/> class.
+            </summary>
+            <param name="factor">Ratio of new tempo to the old tempo.</param>
+            <param name="segment">Algorithm’s segment size in milliseconds.</param>
+            <param name="search">Audio length in milliseconds over which the algorithm will search for overlapping points.</param>
+            <param name="overlap">Segment overlap length in milliseconds.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.TempoEffect.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.Effects.TempoEffect"/> instance to a set of command arguments to be passed to SoX.
+            (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply a Tempo effect.</returns>
+        </member>
+        <member name="T:SoxSharp.Effects.TremoloEffect">
+            <summary>
+            Apply a tremolo (low frequency amplitude modulation) effect to the audio.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.TremoloEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.TremoloEffect.Speed">
+            <summary>
+            Tremolo frequency in Hz.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.TremoloEffect.Depth">
+            <summary>
+            Tremolo depth as a percentage (default is 40).
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.TremoloEffect.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.Effects.TremoloEffect"/> instance to a set of command arguments to be passed to SoX.
+            (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply a Tremolo effect.</returns>
+        </member>
+        <member name="F:SoxSharp.Effects.Types.OptimizationType.Music">
+            <summary>
+            Optimize default values of segment, search and overlap for music processing.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.Effects.Types.OptimizationType.Speech">
+            <summary>
+            Optimize default values of segment, search and overlap for speech processing.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.Effects.Types.OptimizationType.LinearProcessing">
+            <summary>
+            Optimize default values of segment, search and overlap for ‘linear’ processing that tends to cause more noticeable distortion but may be useful when factor is close to 1.
+            </summary>
+        </member>
+        <member name="T:SoxSharp.Effects.Types.Position">
+            <summary>
+            A position within the audio stream.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.Effects.Types.Position.from_">
+            <summary>
+            Whether the position is to be interpreted relative to the start, end or the previous position if the effect accepts multiple position arguments. The audio length must be known for end-relative locations to work.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.Effects.Types.Position.time_">
+            <summary>
+            Position expressed as a time value.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.Effects.Types.Position.samples_">
+            <summary>
+            Position expressed as number of samples.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.Types.Position.#ctor(System.TimeSpan)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.Types.Position"/> struct.
+            </summary>
+            <param name="time">Position expressed as a time value.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.Types.Position.#ctor(System.TimeSpan,SoxSharp.Effects.Types.PositionFrom)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.Types.Position"/> struct.
+            </summary>
+            <param name="time">Position expressed as a time value.</param>
+            <param name="from">How</param>
+        </member>
+        <member name="M:SoxSharp.Effects.Types.Position.#ctor(System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.Types.Position"/> struct.
+            </summary>
+            <param name="samples">Position expressed as number of samples.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.Types.Position.#ctor(System.UInt32,SoxSharp.Effects.Types.PositionFrom)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.Types.Position"/> struct.
+            </summary>
+            <param name="samples">Position expressed as number of samples.</param>
+            <param name="from">Whether the position is to be interpreted relative to the start, end or the previous position.</param>
+        </member>
+        <member name="T:SoxSharp.Effects.Types.GainType">
+            <summary>
+            When type is amplitude or power, a gain of 1 leaves the volume unchanged, less than 1 decreases it, and greater than 1 increases it; a negative gain inverts the audio signal in addition to adjusting its volume.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.Effects.Types.GainType.Amplitude">
+            <summary>
+            Gain is an amplitude (i.e. voltage or linear) ratio. A gain of 1 leaves the volume unchanged, less than 1
+            decreases it, and greater than 1 increases it; a negative gain inverts the audio signal in addition to
+            adjusting its volume.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.Effects.Types.GainType.Power">
+            <summary>
+            Gain is a power (i.e. wattage or voltage-squared) ratio. A gain of 1 leaves the volume unchanged, less than 1
+            decreases it, and greater than 1 increases it; a negative gain inverts the audio signal in addition to
+            adjusting its volume.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.Effects.Types.GainType.Db">
+            <summary>
+            Gain is a power change in dB. A gain of 0 leaves the volume unchanged, less than 0 decreases it,
+            and greater than 0 increases it.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.IBaseEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.IBaseEffect.ToString">
+            <summary>
+            Translate an effect class instance to a set of command arguments to be passed to SoX.
+            (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply the effect.</returns>
+        </member>
+        <member name="P:SoxSharp.Effects.BaseEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.BaseEffect.ToString">
+            <summary>
+            Translate an effect class instance to a set of command arguments to be passed to SoX.
+            (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply the effect.</returns>
+        </member>
+        <member name="T:SoxSharp.Effects.NoiseProfileEffect">
+            <summary>
+            Calculate a profile of the audio for use in noise reduction and save it to file. This effect is usually run on a
+            section of audio (obtained adding a <see cref="T:SoxSharp.Effects.TrimEffect"/> effect to the process chain) that
+            ideally would contain silence but in fact contains noise. Such sections are typically found at the beginning or
+            the end of a recording.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.NoiseProfileEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.NoiseProfileEffect.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.NoiseProfileEffect"/> class.
+            </summary>
+            <param name="file">File.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.NoiseProfileEffect.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.Effects.NoiseProfileEffect"/> instance to a set of command arguments to be passed to SoX to be applied to the input file (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply a Noise Profile effect.</returns>
+        </member>
+        <member name="T:SoxSharp.Effects.NoiseReductionEffect">
+            <summary>
+            Reduce noise in the audio signal by profiling and filtering. This effect is moderately effective at removing
+            consistent background noise such as hiss or hum. Previous to use this effect, a noise profile of the file should
+            be obatined using <see cref="T:SoxSharp.Effects.NoiseProfileEffect"/>.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.NoiseReductionEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.NoiseReductionEffect.Amount">
+            <summary>
+            How much noise should be removed. Valid values are between 0 and 1, with a default of 0.5. Higher numbers will
+            remove more noise but present a greater likelihood of removing wanted components of the audio signal.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.NoiseReductionEffect.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.Effects.NoiseReductionEffect"/> instance to a set of command arguments to be passed to SoX.
+            (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply a Noise Reduction effect.</returns>
+        </member>
+        <member name="T:SoxSharp.Effects.HighPassFilterEffect">
+            <summary>
+            Apply a high-pass filter with 3dB point frequency. The filter can be either single-pole or double-pole
+            (the default). The filter roll off at 6dB per pole per octave (20dB per pole per decade).
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.HighPassFilterEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.HighPassFilterEffect.Type">
+            <summary>
+            Filter type (single-pole or double-pole).
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.HighPassFilterEffect.Frequency">
+            <summary>
+            Central frequency.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.HighPassFilterEffect.Width">
+            <summary>
+            Filter width. Applies only to double-pole filter; the default is Q = 0.707 and gives a Butterworth response.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.HighPassFilterEffect.#ctor(System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.HighPassFilterEffect"/> class.
+            </summary>
+            <param name="frequency">Central frequency.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.HighPassFilterEffect.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.HighPassFilterEffect"/> class.
+            </summary>
+            <param name="frequency">Central frequency.</param>
+            <param name="width">Filter width.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.HighPassFilterEffect.#ctor(SoxSharp.Effects.Types.Frequency)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.HighPassFilterEffect"/> class.
+            </summary>
+            <param name="frequency">Central frequency.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.HighPassFilterEffect.#ctor(SoxSharp.Effects.Types.Frequency,SoxSharp.Effects.Types.Width)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.HighPassFilterEffect"/> class.
+            </summary>
+            <param name="frequency">Central frequency.</param>
+            <param name="width">Filter width.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.HighPassFilterEffect.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.Effects.HighPassFilterEffect"/> instance to a set of command arguments to be passed to SoX.
+            (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply a High-Pass Filter effect.</returns>
+        </member>
+        <member name="T:SoxSharp.Effects.TrimEffect">
+            <summary>
+            Cuts portions out of the audio. Any number of positions may be given; audio is not sent to the output until the
+            first position is reached. The effect then alternates between copying and discarding audio at each position. 
+            Using a value of 0 for the first position parameter allows copying from the beginning of the audio.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.TrimEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.Effects.TrimEffect.Positions">
+            <summary>
+            The positions.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.TrimEffect.#ctor(SoxSharp.Effects.Types.Position)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.TrimEffect"/> class.
+            </summary>
+            <param name="position">Position to use.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.TrimEffect.#ctor(SoxSharp.Effects.Types.Position,SoxSharp.Effects.Types.Position)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.TrimEffect"/> class.
+            </summary>
+            <param name="position1">First position to use.</param>
+            <param name="position2">Second position to use.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.TrimEffect.#ctor(SoxSharp.Effects.Types.Position[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.TrimEffect"/> class.
+            </summary>
+            <param name="positions">Positions to use.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.TrimEffect.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.Effects.TrimEffect"/> instance to a set of command arguments to be passed to SoX.
+            (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply a Trim effect.</returns>
+        </member>
+        <member name="T:SoxSharp.Effects.VolumeEffect">
+            <summary>
+            Apply an amplification or an attenuation to the audio signal.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.VolumeEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.VolumeEffect.Gain">
+            <summary>
+            The amount to change the volume, interpreted according to the given type.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.VolumeEffect.Type">
+            <summary>
+            How to interpret the gain value.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.VolumeEffect.Limiter">
+            <summary>
+            Used only on peaks to prevent clipping. Should be a value much less than 1 (e.g. 0.05 or 0.02).
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.VolumeEffect.#ctor(System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.VolumeEffect"/> class.
+            </summary>
+            <param name="gain">Volume gain.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.VolumeEffect.#ctor(System.Double,SoxSharp.Effects.Types.GainType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.VolumeEffect"/> class.
+            </summary>
+            <param name="gain">Volume gain.</param>
+            <param name="type">How to interpret the gain value.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.VolumeEffect.#ctor(System.Double,SoxSharp.Effects.Types.GainType,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.VolumeEffect"/> class.
+            </summary>
+            <param name="gain">Volume gain.</param>
+            <param name="type">How to interpret the gain value.</param>
+            <param name="limiter">Gain limiter.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.VolumeEffect.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.Effects.VolumeEffect"/> instance to a set of command arguments to be passed to SoX to be applied
+            to the input file (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply a Volume effect.</returns>
+        </member>
+        <member name="T:SoxSharp.Effects.AllPassFilterEffect">
+            <summary>
+            Apply a two-pole all-pass filter with a central frequency and width. An all-pass filter changes the audio’s
+            frequency to phase relationship without changing its frequency to amplitude relationship.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.AllPassFilterEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.AllPassFilterEffect.Frequency">
+            <summary>
+            Central frequency.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.AllPassFilterEffect.Width">
+            <summary>
+            Filter width.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.AllPassFilterEffect.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.AllPassFilterEfect"/> class.
+            </summary>
+            <param name="frequency">Central frequency.</param>
+            <param name="width">Filter width.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.AllPassFilterEffect.#ctor(SoxSharp.Effects.Types.Frequency,SoxSharp.Effects.Types.Width)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.AllPassFilterEfect"/> class.
+            </summary>
+            <param name="frequency">Central frequency.</param>
+            <param name="width">Filter width.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.AllPassFilterEffect.ToString">
+            <summary>
+            Translate an <see cref="T:SoxSharp.Effects.AllPassFilterEffect"/> instance to a set of command arguments to be passed to SoX.
+            (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply an All-Pass Filter
+            effect.</returns>
+        </member>
+        <member name="T:SoxSharp.Effects.BassEffect">
+            <summary>
+            Boost or cut the bass (lower) frequencies of the audio using a two-pole shelving filter with a response
+            similar to that of a standard hi-fi’s tone-controls. This is also known as shelving equalisation (EQ).
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.BassEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.BassEffect.Gain">
+            <summary>
+            Gives the gain at 0 Hz. Its useful range is about −20 (for a large cut) to +20 (for a large boost).
+            Beware of Clipping when using a positive gain.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.BassEffect.Frequency">
+            <summary>
+            Sets the filter’s central frequency and so can be used to extend or reduce the frequency range to
+            be boosted or cut. The default value is 100 Hz.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.BassEffect.Width">
+            <summary>
+            Determines how steep is the filter’s shelf transition. In addition to the common width specification methods,
+            ‘slope’ (the default) may be used. The useful range of ‘slope’ is about 0.3, for a gentle slope, to 1
+            (the maximum), for a steep slope; the default value is 0.5.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.BassEffect.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.Effects.BassEffect"/> instance to a set of command arguments to be passed to SoX.
+            (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply a Bass effect.</returns>
+        </member>
+        <member name="T:SoxSharp.Effects.TrebleEffect">
+            <summary>
+            Boost or cut the treble (upper) frequencies of the audio using a two-pole shelving filter with a response similar
+            to that of a standard hi-fi’s tone-controls. This is also known as shelving equalisation (EQ).
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.TrebleEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.TrebleEffect.Gain">
+            <summary>
+            Gives the gain at whichever is the lower of ∼22 kHz and the Nyquist frequency. Its useful range is about −20
+            (for a large cut) to +20 (for a large boost). Beware of Clipping when using a positive gain.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.TrebleEffect.Frequency">
+            <summary>
+            Sets the filter’s central frequency and so can be used to extend or reduce the frequency range to
+            be boosted or cut. The default value is 3 kHz.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.TrebleEffect.Width">
+            <summary>
+            Determines how steep is the filter’s shelf transition. In addition to the common width specification methods,
+            ‘slope’ (the default) may be used. The useful range of ‘slope’ is about 0.3, for a gentle slope, to 1
+            (the maximum), for a steep slope; the default value is 0.5.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.TrebleEffect.#ctor(System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.TrebleEffect"/> class.
+            </summary>
+            <param name="gain">Gain value.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.TrebleEffect.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.TrebleEffect"/> class.
+            </summary>
+            <param name="gain">Gain value.</param>
+            <param name="frequency">Central frequency.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.TrebleEffect.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.TrebleEffect"/> class.
+            </summary>
+            <param name="gain">Gain value.</param>
+            <param name="frequency">Central frequency.</param>
+            <param name="width">Shelf transition steep.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.TrebleEffect.#ctor(System.Double,SoxSharp.Effects.Types.Frequency)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.TrebleEffect"/> class.
+            </summary>
+            <param name="gain">Gain value.</param>
+            <param name="frequency">Central frequency.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.TrebleEffect.#ctor(System.Double,SoxSharp.Effects.Types.Frequency,SoxSharp.Effects.Types.Width)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.TrebleEffect"/> class.
+            </summary>
+            <param name="gain">Gain value.</param>
+            <param name="frequency">Central frequency.</param>
+            <param name="width">Shelf transition steep.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.TrebleEffect.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.Effects.TrebleEffect"/> instance to a set of command arguments to be passed to SoX.
+            (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply a Treble effect.</returns>
+        </member>
+        <member name="T:SoxSharp.Effects.LowPassFilterEffect">
+            <summary>
+            Apply a low-pass filter with 3dB point frequency. The filter can be either single-pole or double-pole
+            (the default). The filter roll off at 6dB per pole per octave (20dB per pole per decade).
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.LowPassFilterEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.LowPassFilterEffect.Width">
+            <summary>
+            Applies only to double-pole filter; the default is Q = 0.707 and gives a Butterworth response.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.LowPassFilterEffect.#ctor(System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.NoiseReductionEffect"/> class.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.LowPassFilterEffect.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.NoiseReductionEffect"/> class.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.LowPassFilterEffect.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.Effects.LowPassFilterEffect"/> instance to a set of command arguments to be passed to SoX.
+            (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply a Low-Pass Filter effect.</returns>
+        </member>
+        <member name="T:SoxSharp.Effects.BandPassFilterEffect">
+            <summary>
+            Apply a two-pole Butterworth band-pass filter with a central frequency and a (3dB-point) bandwidth.
+            The filter roll off at 6dB per octave (20dB per decade). 
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.BandPassFilterEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.BandPassFilterEffect.Frequency">
+            <summary>
+            Central frequency.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.BandPassFilterEffect.Width">
+            <summary>
+            Filter width.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.BandPassFilterEffect.SkirtGain">
+            <summary>
+            Selects a constant skirt gain (peak gain = Q) instead of the default constant 0dB peak gain.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.BandPassFilterEffect.#ctor(System.Double,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="frequency">Central frequency.</param>
+            <param name="width">Filter width.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.BandPassFilterEffect.#ctor(SoxSharp.Effects.Types.Frequency,SoxSharp.Effects.Types.Width)">
+            <summary>
+            
+            </summary>
+            <param name="frequency">Central frequency.</param>
+            <param name="width">Filter width.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.BandPassFilterEffect.ToString">
+            <summary>
+            Translate an <see cref="T:SoxSharp.Effects.BandPassFilterEffect"/> instance to a set of command arguments to be passed to SoX.
+            (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply an Band-Pass Filter effect.</returns>
+        </member>
+        <member name="T:SoxSharp.Effects.BandRejectFilterEffect">
+            <summary>
+            Apply a two-pole Butterworth band-reject filter with a central frequency and a (3dB-point) bandwidth.
+            The filter roll off at 6dB per octave (20dB per decade).
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.BandRejectFilterEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.BandRejectFilterEffect.Frequency">
+            <summary>
+            Central frequency.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.BandRejectFilterEffect.Width">
+            <summary>
+            Filter width.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.BandRejectFilterEffect.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.BandRejectFilterEffect"/> class.
+            </summary>
+            <param name="frequency">Central frequency.</param>
+            <param name="width">Filter width.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.BandRejectFilterEffect.#ctor(SoxSharp.Effects.Types.Frequency,SoxSharp.Effects.Types.Width)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.BandRejectFilterEffect"/> class.
+            </summary>
+            <param name="frequency">Central frequency.</param>
+            <param name="width">Filter width.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.BandRejectFilterEffect.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.Effects.BandRejectFilterEffect"/> instance to a set of command arguments to be passed to SoX.
+            (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply a Band-Reject Filter effect.</returns>
+        </member>
+        <member name="T:SoxSharp.Effects.ContrastEffect">
+            <summary>
+            Comparable with compression, this effect modifies an audio signal to make it sound louder. 
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.ContrastEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.ContrastEffect.Enhancement">
+            <summary>
+            Controls the amount of the enhancement and is a number in the range 0−100 (default 75). Note that a value of 0
+            still gives a significant contrast enhancement.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.ContrastEffect.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.Effects.ContrastEffect"/> instance to a set of command arguments to be passed to SoX.
+            (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply a Contrast effect.</returns>
+        </member>
+        <member name="T:SoxSharp.Effects.LoudnessEffect">
+            <summary>
+            Loudness control. Similar to the gain effect, but provides equalisation for the human auditory system. See
+            http://en.wikipedia.org/wiki/Loudness for a detailed description of loudness. The gain adjustment is usually
+            negative and the signal is equalised according to ISO 226 w.r.t. a reference level of 65dB. An alternative
+            reference level may be given if the original audio has been equalised for some other optimal level.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.LoudnessEffect.Name">
+            <summary>
+            SoX effect name.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.LoudnessEffect.Gain">
+            <summary>
+            Gain adjustment. A default gain of −10dB is used if no value is given.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Effects.LoudnessEffect.Reference">
+            <summary>
+            Alternative reference level to use.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.LoudnessEffect.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.LoudnessEffect"/> class.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Effects.LoudnessEffect.#ctor(System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.LoudnessEffect"/> class.
+            </summary>
+            <param name="gain">Volume gain.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.LoudnessEffect.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Effects.LoudnessEffect"/> class.
+            </summary>
+            <param name="gain">Volume gain.</param>
+            <param name="reference">How to interpret the gain value.</param>
+        </member>
+        <member name="M:SoxSharp.Effects.LoudnessEffect.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.Effects.LoudnessEffect"/> instance to a set of command arguments to be passed to SoX to be applied
+            to the input file (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>A <see cref="T:System.String"/> containing SoX command arguments to apply a Loudness effect.</returns>
+        </member>
+        <member name="T:SoxSharp.LogMessageEventArgs">
+            <summary>
+            Provides data for the <see cref="E:SoxSharp.Sox.OnLogMessage"/> event. 
+            </summary>
+        </member>
+        <member name="M:SoxSharp.LogMessageEventArgs.#ctor(SoxSharp.LogLevelType,System.String,System.String)">
+            <summary>
+            Initializes a <see cref="T:SoxSharp.LogMessageEventArgs"/> instance with the provided values.
+            </summary>
+            <param name="logLevel">Message severity.</param>
+            <param name="source">Message source.</param>
+            <param name="message">Message text.</param>
+        </member>
+        <member name="P:SoxSharp.LogMessageEventArgs.LogLevel">
+            <summary>
+            Message severity.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.LogMessageEventArgs.Source">
+            <summary>
+            SoX logger module.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.LogMessageEventArgs.Message">
+            <summary>
+            Message text.
+            </summary>
+        </member>
+        <member name="T:SoxSharp.ProgressEventArgs">
+            <summary>
+            Provides data for the <see cref="E:SoxSharp.Sox.OnProgress"/> event.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.ProgressEventArgs.#ctor(System.UInt16,System.TimeSpan,System.TimeSpan,System.UInt64)">
+            <summary>
+            Initializes a <see cref="T:SoxSharp.ProgressEventArgs"/> instance with the provided values.
+            </summary>
+            <param name="progress">The actual progress value, from 0 to 100.</param>
+            <param name="processed">File time that has been processed, based on file total duration.</param>
+            <param name="remaining">File time pending to be processed, based on file total duration.</param>
+            <param name="outputSize">Actual size of the generated output file.</param>
+        </member>
+        <member name="P:SoxSharp.ProgressEventArgs.Progress">
+            <summary>
+            The actual progress value, from 0 to 100.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.ProgressEventArgs.Processed">
+            <summary>
+            File time that has been processed, based on file total duration.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.ProgressEventArgs.Remaining">
+            <summary>
+            File time pending to be processed, based on file total duration.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.ProgressEventArgs.OutputSize">
+            <summary>
+            Actual size of the generated output file.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.ProgressEventArgs.Abort">
+            <summary>
+            Allows to cancel the current operation.
+            </summary>
+            <value><c>true</c> to cancel; otherwise, leave as <c>false</c>.</value>
+        </member>
+        <member name="T:SoxSharp.AudioInfo">
+            <summary>
+            Provides information about an audio file.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.AudioInfo.Channels">
+            <summary>
+            Number of audio channels.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.AudioInfo.SampleRate">
+            <summary>
+            Audio sample rate.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.AudioInfo.SampleSize">
+            <summary>
+            Audio sample size (bits).
+            </summary>
+        </member>
+        <member name="F:SoxSharp.AudioInfo.Duration">
+            <summary>
+            Audio time length. 
+            </summary>
+        </member>
+        <member name="F:SoxSharp.AudioInfo.Size">
+            <summary>
+            Audio file size.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.AudioInfo.BitRate">
+            <summary>
+            Audio bitrate.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.AudioInfo.Format">
+            <summary>
+            Audio format.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.AudioInfo.#ctor(System.UInt16,System.UInt32,System.UInt16,System.TimeSpan,System.UInt64,System.UInt32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.AudioInfo"/> class. 
+            </summary>
+            <param name="channels">Number of audio channels.</param>
+            <param name="sampleRate">Audio sample rate.</param>
+            <param name="sampleSize">Audio sample size (bits).</param>
+            <param name="duration">Audio time length.</param>
+            <param name="size">Audio file size</param>
+            <param name="bitRate"></param>
+            <param name="format">Audio format.</param>
+        </member>
+        <member name="M:SoxSharp.AudioInfo.ToString">
+            <summary>
+            Returns information about the <see cref="T:SoxSharp.AudioInfo"/> instance (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>String containing all <see cref="T:SoxSharp.AudioInfo"/> instance properties values.</returns>
+        </member>
+        <member name="T:SoxSharp.Exceptions.SoxUnexpectedOutputException">
+            <summary>
+            Exception that is thrown when SoX output doesn't match the expected regular expression.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Exceptions.SoxUnexpectedOutputException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.SoxUnexpectedOutputException"/> class with an output string.
+            </summary>
+            <param name="output">SoX unexpected output string.</param>
+        </member>
+        <member name="M:SoxSharp.Exceptions.SoxUnexpectedOutputException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.SoxUnexpectedOutputException"/> class with an output string
+            and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="output">SoX unexpected output string.</param>
+            <param name="inner">Exception that caused it.</param>
+        </member>
+        <member name="T:SoxSharp.Exceptions.SoxException">
+            <summary>
+            Generic SoX exception.
+            </summary> 
+        </member>
+        <member name="M:SoxSharp.Exceptions.SoxException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.SoxException"/> class with its message string set
+            to a default message.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Exceptions.SoxException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.SoxException"/> class with a specified message.
+            </summary>
+            <param name="message">The exception's message.</param>
+        </member>
+        <member name="M:SoxSharp.Exceptions.SoxException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.SoxException"/> class with a specified message and a
+            reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The exception's message.</param>
+            <param name="inner">Exception that caused it.</param>
+        </member>
+        <member name="T:SoxSharp.Exceptions.SoxEffectException">
+            <summary>
+            Exception that is thrown when trying to apply an Effect which caontains invalid data.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Exceptions.SoxEffectException.EffectName">
+            <summary>
+            Name of the effect that caused the exception.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Exceptions.SoxEffectException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.SoxEffectException"/> class with its message string set
+            to a default message.
+            </summary>
+            <param name="effectName">The effect name.</param>
+        </member>
+        <member name="M:SoxSharp.Exceptions.SoxEffectException.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.SoxEffectException"/> class with a specified message.
+            </summary>
+            <param name="effectName">The effect name.</param>
+            <param name="message">The exception's message.</param>
+        </member>
+        <member name="M:SoxSharp.Exceptions.SoxEffectException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.SoxEffectException"/> class with a specified message and a
+            reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="effectName">The effect name.</param>
+            <param name="message">The exception's message.</param>
+            <param name="inner">Exception that caused it.</param>
+        </member>
+        <member name="T:SoxSharp.FormatOptions">
+            <summary>
+            Format options that are applicable to both input and output files.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.FormatOptions.Type">
+            <summary>
+            Audio file type.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.FormatOptions.Encoding">
+            <summary>
+            Audio encoding.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.FormatOptions.SampleSize">
+            <summary>
+            Sample size (bits).
+            </summary>
+        </member>
+        <member name="P:SoxSharp.FormatOptions.ReverseNibbles">
+            <summary>
+            Encoded nibble order.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.FormatOptions.ReverseBits">
+            <summary>
+            Encoded bit order.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.FormatOptions.ByteOrder">
+            <summary>
+            Encoded byte order.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.FormatOptions.Channels">
+            <summary>
+            Number of audio channels.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.FormatOptions.SampleRate">
+            <summary>
+            Audio sample rate.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.FormatOptions.Glob">
+            <summary>
+            Allow glob wildcard match filename.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.FormatOptions.CustomArgs">
+            <summary>
+            Custom format arguments.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.FormatOptions.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.FormatOptions.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.FormatOptions"/> instance to a set of command arguments to be passed to SoX (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>String containing SoX command arguments.</returns>
+        </member>
+        <member name="T:SoxSharp.InputFile">
+            <summary>
+            Input format options.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.InputFile.FileName">
+            <summary>
+            Input file name.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.InputFile.Volume">
+            <summary>
+            Input file volume adjustment factor.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.InputFile.IgnoreLength">
+            <summary>
+            Ignore input file length given in header and read to EOF.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.InputFile.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.InputFile"/> class.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.InputFile.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.InputFile"/> class.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.InputFile.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.InputFile"/> instance to a set of command arguments to be passed to SoX to be applied to the input file (invalidates <see cref="M:System.Object.ToString"/>).
+            </summary>
+            <returns>String containing SoX command arguments.</returns>
+        </member>
+        <member name="T:SoxSharp.OutputFormatOptions">
+            <summary>
+            Format options to be applied to the output file. For any property not set here, SoX will infer the value from the input file.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.OutputFormatOptions.Compression">
+            <summary>
+            Compression factor for output format.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.OutputFormatOptions.Comment">
+            <summary>
+            Set comment for output file.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.OutputFormatOptions.AddComment">
+            <summary>
+            Add comment to output file.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.OutputFormatOptions.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.OutputFormatOptions"/> class.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.OutputFormatOptions.ToString">
+            <summary>
+            Translate a <see cref="T:SoxSharp.OutputFormatOptions"/> instance to a set of command arguments to be passed to SoX (adds additional command arguments to <see cref="M:SoxSharp.FormatOptions.ToString"/>).
+            </summary>
+            <returns>String containing SoX command arguments.</returns>
+        </member>
+        <member name="T:SoxSharp.Resources">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Resources.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+        <member name="T:SoxSharp.Sox">
+            <summary>
+            Encapsulates all the information needed to launch SoX and handle its output.
+            </summary>
+        </member>
+        <member name="E:SoxSharp.Sox.OnProgress">
+            <summary>
+            Provides updated progress status while SoX is being executed.
+            </summary>
+        </member>
+        <member name="E:SoxSharp.Sox.OnLogMessage">
+            <summary>
+            Occurs when SoX generates any non-FAIL log message.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Sox.Path">
+            <summary>
+            Location of the SoX executable to be used by the library.
+            </summary>
+            <value>The executable path.</value>
+        </member>
+        <member name="P:SoxSharp.Sox.Buffer">
+            <summary>
+            Size of all processing buffers (default is 8192).
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Sox.Multithreaded">
+            <summary>
+            Enable parallel effects channels processing (where available).
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Sox.Output">
+            <summary>
+            Output format options.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Sox.Effects">
+            <summary>
+            Effects to be applied.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Sox.CustomArgs">
+            <summary>
+            Custom global arguments.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Sox.CustomEffects">
+            <summary>
+            Custom effects. Add here the command line arguments for any effect not currently implemented in SoXSharp.
+            </summary>
+        </member>
+        <member name="P:SoxSharp.Sox.LastCommand">
+            <summary>
+            Gets the full command line of the last call to SoX.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.Sox.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SoxSharp.Sox"/> class.
+            </summary>
+            <param name="path">Location of the SoX executable to be used by the library.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Dispose">
+            <summary>
+            Releases all resource used by the <see cref="T:SoxSharp.Sox"/> object.
+            </summary>
+            <remarks>Call <see cref="T:Sox.Dispose"/> when you are finished using the <see cref="T:SoxSharp.Sox"/> instance. This
+            <see cref="T:Sox.Dispose"/> method leaves the <see cref="T:SoxSharp.Sox"/> instance in an unusable state. After calling
+            it, you must release all references to the instance so the garbage
+            collector can reclaim the memory that it was occupying.</remarks>
+        </member>
+        <member name="M:SoxSharp.Sox.GetInfo(System.String)">
+            <summary>
+            Gets information about the given file. 
+            </summary>
+            <returns>File information as a <see cref="T:SoxSharp.AudioInfo"/> instance.</returns>
+            <param name="inputFile">Input file.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Record(System.String)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance and record audio the specified file.
+            </summary>
+            <param name="outputFile">Audio file to be recorded.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Play(System.String)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance and plays the specified file.
+            </summary>
+            <param name="inputFile">Audio file to be played.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Play(SoxSharp.InputFile)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance and plays the specified file.
+            </summary>
+            <param name="inputFile">Audio file to be played.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Play(System.String[])">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance and plays the specified files.
+            </summary>
+            <param name="inputFiles">Audio files to be played.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Play(System.String[],SoxSharp.CombinationType)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance and plays the specified files.
+            </summary>
+            <param name="inputFiles">Audio files to be played.</param>
+            <param name="combination">How to combine the input files.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Play(SoxSharp.InputFile[])">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance and plays the specified files.
+            </summary>
+            <param name="inputFiles">Audio files to be played.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Play(SoxSharp.InputFile[],SoxSharp.CombinationType)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance and plays the specified files.
+            </summary>
+            <param name="inputFiles">Audio files to be played.</param>
+            <param name="combination">How to combine the input files.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Process(System.String)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance.
+            </summary>
+            <param name="inputFile">Audio file to be processed.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Process(SoxSharp.InputFile)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance.
+            </summary>
+            <param name="inputFile">Audio file to be processed.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Process(System.String,System.String)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance.
+            </summary>
+            <param name="inputFile">Audio file to be processed.</param>
+            <param name="outputFile">Output file.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Process(SoxSharp.InputFile,System.String)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance.
+            </summary>
+            <param name="inputFile">Audio file to be processed.</param>
+            <param name="outputFile">Output file.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Process(System.String,System.String,System.String)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance.
+            </summary>
+            <param name="inputFile1">First audio file to be processed.</param>
+            <param name="inputFile2">Second audio file to be processed.</param>
+            <param name="outputFile">Output file.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Process(System.String,System.String,System.String,SoxSharp.CombinationType)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance.
+            </summary>
+            <param name="inputFile1">First audio file to be processed.</param>
+            <param name="inputFile2">Second audio file to be processed.</param>
+            <param name="outputFile">Output file.</param>
+            <param name="combination">How to combine the input files.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Process(SoxSharp.InputFile,SoxSharp.InputFile,System.String)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance.
+            </summary>
+            <param name="inputFile1">First audio file to be processed.</param>
+            <param name="inputFile2">Second audio file to be processed.</param>
+            <param name="outputFile">Output file.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Process(SoxSharp.InputFile,SoxSharp.InputFile,System.String,SoxSharp.CombinationType)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance.
+            </summary>
+            <param name="inputFile1">First audio file to be processed.</param>
+            <param name="inputFile2">Second audio file to be processed.</param>
+            <param name="outputFile">Output file.</param>
+            <param name="combination">How to combine the input files.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Process(System.String[],System.String)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance.
+            </summary>
+            <param name="inputFiles">Audio files to be processed.</param>
+            <param name="outputFile">Output file.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Process(System.String[],System.String,SoxSharp.CombinationType)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance.
+            </summary>
+            <param name="inputFiles">Audio files to be processed.</param>
+            <param name="outputFile">Output file.</param>
+            <param name="combination">How to combine the input files.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Process(SoxSharp.InputFile[],System.String)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance.
+            </summary>
+            <param name="inputFiles">Audio files to be processed.</param>
+            <param name="outputFile">Output file.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Process(SoxSharp.InputFile[],System.String,SoxSharp.CombinationType)">
+            <summary>
+            Spawns a new SoX process using the specified options in this instance.
+            </summary>
+            <param name="inputFiles">Audio files to be processed.</param>
+            <param name="outputFile">Output file.</param>
+            <param name="combination">How to combine the input files.</param>
+        </member>
+        <member name="M:SoxSharp.Sox.Abort">
+            <summary>
+            Kills the SoX process.
+            </summary>
+        </member>
+        <member name="T:SoxSharp.FileType">
+            <summary>
+            Audio file formats.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.SVX">
+            <summary>
+            Amiga 8SVX musical instrument description format.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.AIF">
+            <summary>
+            Audio Interchage File Format. Used on old Apple Macs, Apple IIc/IIgs and SGI. SoX’s AIFF support does not
+            include multiple audio chunks, or the 8SVX musical instrument description format. AIFF files are multimedia
+            archives and can have multiple audio and picture chunks — you may need a separate archiver to work with them.
+            With Mac OS X, AIFF has been superseded by CAF.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.AIFC">
+            <summary>
+            AIFF-C (not compressed), defined in DAVIC 1.4 Part 9 Annex B. Format based on AIFF that was created to allow
+            handling compressed audio. It can also handle little endian uncompressed linear data that is often referred to
+            as sowt encoding. This encoding has also become the defacto format produced by modern Macs as well as iTunes on
+            any platform. AIFF-C files produced by other applications typically have the file extension .aif and require
+            looking at its header to detect the true format. The sowt encoding is the only encoding that SoX can handle
+            with this format. Any private chunks are not supported.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.AIFF">
+            <summary>
+            Audio Interchage File Format. Used on old Apple Macs, Apple IIc/IIgs and SGI. SoX’s AIFF support does not
+            include multiple audio chunks, or the 8SVX musical instrument description format. AIFF files are multimedia
+            archives and can have multiple audio and picture chunks — you may need a separate archiver to work with them.
+            With Mac OS X, AIFF has been superseded by CAF.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.AIFFC">
+            <summary>
+            AIFF-C (not compressed), defined in DAVIC 1.4 Part 9 Annex B. Format based on AIFF that was created to allow
+            handling compressed audio. It can also handle little endian uncompressed linear data that is often referred to
+            as sowt encoding. This encoding has also become the defacto format produced by modern Macs as well as iTunes on
+            any platform. AIFF-C files produced by other applications typically have the file extension .aif and require
+            looking at its header to detect the true format. The sowt encoding is the only encoding that SoX can handle
+            with this format. Any private chunks are not supported.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.AL">
+            <summary>
+            Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 8-bit A-law.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.AMB">
+            <summary>
+            Ambisonic B‐Format. A specialisation of .wav with between 3 and 16 channels of audio for use with an Ambisonic
+            decoder. It is up to the user to get the channels together in the right order and at the correct amplitude.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.AU">
+            <summary>
+            Sun Microsystems AU file.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.AVR">
+            <summary>
+            Audio Visual Research format; used by a number of commercial packages on the Mac.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.CAF">
+            <summary>
+            Apple’s Core Audio File format.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.CDDA">
+            <summary>
+            ‘Red Book’ Compact Disc Digital Audio (raw audio). CDDA has two audio channels formatted as 16-bit signed
+            integers (big endian)at a sample rate of 44.1 kHz. The number of (stereo) samples in each CDDA track is always
+            a multiple of 588.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.CDR">
+            <summary>
+            ‘Red Book’ Compact Disc Digital Audio (raw audio). CDDA has two audio channels formatted as 16-bit signed
+            integers (big endian)at a sample rate of 44.1 kHz. The number of (stereo) samples in each CDDA track is always
+            a multiple of 588.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.CVS">
+            <summary>
+            Headerless MIL Std 188 113 Continuously Variable Slope Delta modulation. A headerless format used to compress
+            speech audio for applications such as voice mail. This format is sometimes used with bit-reversed samples.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.CVSD">
+            <summary>
+            Headerless MIL Std 188 113 Continuously Variable Slope Delta modulation. A headerless format used to compress
+            speech audio for applications such as voice mail. This format is sometimes used with bit-reversed samples.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.CVU">
+            <summary>
+            Headerless Continuously Variable Slope Delta modulation (unfiltered). This is an alternative handler for CVSD
+            that is unfiltered but can be used with any bit-rate.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.DAT">
+            <summary>
+            Text Data files. These files contain a textual representation of the sample data. There is one line at the
+            beginning that contains the sample rate, and one line that contains the number of channels. Subsequent lines
+            contain two or more numeric data intems: the time since the beginning of the first sample and the sample value
+            for each channel.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.DVMS">
+            <summary>
+            Self-describing variant of CVSD.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.F32">
+            <summary>
+            Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 32-bit floating point PCM.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.F4">
+            <summary>
+            [DEPRECATED] Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 4 bytes floating point PCM.
+            Superseded by F32 type.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.F64">
+            <summary>
+            Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 64-bit floating point PCM.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.F8">
+            <summary>
+            [DEPRECATED] Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 8 bytes floating point PCM.
+            Superseded by F64 type.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.FAP">
+            <summary>
+            Ensoniq PARIS file format (little-endian).
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.FLAC">
+            <summary>
+            Xiph.org’s Free Lossless Audio Codec Compressed Audio. Open, patent-free codec designed for compressing music.
+            SoX can read native FLAC files (.flac) but not Ogg FLAC files (.ogg).
+            SoX can write native FLAC files according to a given or default compression level
+            (see <see cref="P:SoxSharp.OutputFormatOptions.Compression"/>). 8 is the default compression level and gives the best
+            (but slowest) compression; 0 gives the least (but fastest) compression.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.FSSD">
+            <summary>
+            An alias for the .u8 format.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.GSM">
+            <summary>
+            GSM 06.10 Lossy Speech Compression. A lossy format for compressing speech which is used in the Global Standard
+            for Mobile telecommunications (GSM). It’s good for its purpose, shrinking audio data size, but it will introduce
+            lots of noise when a given audio signal is encoded and decoded multiple times. This format is used by some voice
+            mail applications. It is rather CPU intensive.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.GSRT">
+            <summary>
+            Grandstream ringtone files. Whilst this file format can contain A-Law, μ-law, GSM, G.722, G.723, G.726, G.728, or iLBC
+            encoded audio, SoX supports reading and writing only A-Law and μ-law.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.HCOM">
+            <summary>
+            Macintosh HCOM files. These are Mac FSSD files with Huffman compression.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.HTK">
+            <summary>
+            Single channel 16-bit PCM format used by HTK, a toolkit for building Hidden Markov Model speech processing tools.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.IMA">
+            <summary>
+            A headerless file of IMA ADPCM audio data. IMA ADPCM claims 16-bit precision packed into only 4 bits, but in fact
+            sounds no better than .vox.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.IRCAM">
+            <summary>
+            Another name for SF.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.LA">
+            <summary>
+            Raw (headerless) audio file with a default sample rate of 8kHz and encoded as inverse bit order 8-bit A-law.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.LPC">
+            <summary>
+            LPC-10 is a compression scheme for speech developed in the United States. See http://www.arl.wustl.edu/˜jaf/lpc/
+            for details. There is no associated file format, so SoX’s implementation is headerless.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.LPC10">
+            <summary>
+            LPC-10 is a compression scheme for speech developed in the United States. See http://www.arl.wustl.edu/˜jaf/lpc/
+            for details. There is no associated file format, so SoX’s implementation is headerless.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.LU">
+            <summary>
+            Raw (headerless) audio file with a default sample rate of 8kHz and encoded as inverse bit order 8-bit μ-law.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.MAUD">
+            <summary>
+            An IFF-conforming audio file type, registered by MS MacroSystem Computer GmbH, published along with the ‘Toccata’
+            soundcard on the Amiga. Allows 8-bit linear, 16-bit linear, A-Law, μ-law in mono and stereo.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.MP3">
+            <summary>
+            MP3 compressed audio; MP3 (MPEG Layer 3) is a part of the MPEG standards for audio and video compression. It is a
+            lossy compression format that achieves good compression rates with little quality loss.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.NIST">
+            <summary>
+            SPHERE (SPeech HEader Resources). Format defined by NIST (National Institute of Standards and Technology) and
+            used with speech audio. SoX can read these files when they contain μ-law and PCM data. It will ignore any header
+            information that says the data is compressed using shorten compression and will treat the data as either μ-law
+            or PCM.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.RAW">
+            <summary>
+            Raw (headerless) audio file.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.S1">
+            <summary>
+            [DEPRECATED] Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 1 byte signed integer PCM.
+            Superseded by S8 type.
+            /// </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.S16">
+            <summary>
+            Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 16-bit signed integer PCM.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.S2">
+            <summary>
+            [DEPRECATED] Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 2 bytes signed integer PCM.
+            Superseded by S16 type.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.S24">
+            <summary>
+            Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 24-bit signed integer PCM.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.S3">
+            <summary>
+            [DEPRECATED] Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 3 bytes signed integer PCM.
+            Superseded by S24 type.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.S32">
+            <summary>
+            Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 32-bit signed integer PCM.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.S4">
+            <summary>
+            [DEPRECATED] Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 4 bytes signed integer PCM.
+            Superseded by S32 type.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.S8">
+            <summary>
+            Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 8-bit signed integer PCM.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.SB">
+            <summary>
+            [DEPRECATED] Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 1 byte signed integer PCM.
+            Superseded by S8 type.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.SL">
+            <summary>
+            [DEPRECATED] Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 4 bytes signed integer PCM.
+            Superseded by S32 type.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.SPH">
+            <summary>
+            SPHERE (SPeech HEader Resources). Format defined by NIST (National Institute of Standards and Technology) and
+            used with speech audio. SoX can read these files when they contain μ-law and PCM data. It will ignore any header
+            information that says the data is compressed using shorten compression and will treat the data as either μ-law
+            or PCM.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.SW">
+            <summary>
+            [DEPRECATED] Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 2 bytes signed integer PCM.
+            Superseded by S16 type.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.U1">
+            <summary>
+            [DEPRECATED] Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 1 byte unsigned integer PCM.
+            Superseded by U8 type.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.U16">
+            <summary>
+            Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 16-bit unsigned integer PCM.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.U2">
+            <summary>
+            [DEPRECATED] Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 2 bytes unsigned integer PCM.
+            Superseded by U16 type.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.U24">
+            <summary>
+            Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 24-bit unsigned integer PCM.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.U3">
+            <summary>
+            [DEPRECATED] Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 3 bytes unsigned integer PCM.
+            Superseded by U24 type.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.U32">
+            <summary>
+            Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 32-bit unsigned integer PCM.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.U4">
+            <summary>
+            [DEPRECATED] Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 4 bytes unsigned integer PCM.
+            Superseded by U32 type.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.U8">
+            <summary>
+            Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 8-bit unsigned integer PCM.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.UB">
+            <summary>
+            [DEPRECATED] Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 1 byte unsigned integer PCM.
+            Superseded by U8 type.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.UL">
+            <summary>
+            Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 8-bit μ-law.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.UW">
+            <summary>
+            [DEPRECATED] Raw (headerless) audio file with a default sample rate of 8kHz and encoded as 2 bytes unsigned integer PCM.
+            Superseded by S16 type.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.VMS">
+            <summary>
+            Self-describing variant of CVSD.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.VOC">
+            <summary>
+            Sound Blaster VOC files. VOC files are multi-part and contain silence parts, looping, and different sample rates
+            for different chunks. On input, the silence parts are filled out, loops are rejected, and sample data with a new
+            sample rate is rejected. Silence with a different sample rate is generated appropriately. On output, silence is
+            not detected, nor are impossible sample rates. SoX supports reading (but not writing) VOC files with multiple
+            blocks, and files containing μ-law, A-law, and 2/3/4-bit ADPCM samples.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.VOX">
+            <summary>
+            A headerless file of Dialogic/OKI ADPCM audio data. This ADPCM data has 12-bit precision packed into only 4-bits.
+            Some early Dialogic hardware does not always reset the ADPCM encoder at the start of each vox file. This can
+            result in clipping and/or DC offset problems when it comes to decoding the audio. Whilst little can be done
+            about the clipping, a DC offset can be removed by passing the decoded audio through a high-pass filter.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.WAV">
+            <summary>
+            Microsoft .WAV RIFF files. This is the native audio file format of Windows, and widely used for uncompressed
+            audio. Normally .wav files have all formatting information in their headers, and so do not need any format
+            options specified for an input file. If any are, they will override the file header, and you will be warned to
+            this effect. Output format options will cause a format conversion, and the .wav will written appropriately.
+            SoX can read and write linear PCM, floating point, μ-law, A-law, MS ADPCM, and IMA (or DVI) ADPCM encoded
+            samples. WAV files can also contain audio encoded in many other ways (not currently supported with SoX)
+            e.g. MP3; in some cases such a file can still be read by SoX by overriding the file type. Big endian versions
+            of RIFF files, called RIFX, are also supported.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.WAVPCM">
+            <summary>
+            A non-standard, but widely used, variant of .wav. Some applications cannot read a standard WAV file header for
+            PCM-encoded data with sample-size greater than 16-bits or with more than two channels, but can read a non-
+            standard WAV header. It is likely that such applications will eventually be updated to support the standard
+            header, but in the mean time, this SoX format can be used to create files with the non-standard header that
+            should work with these applications. Note that SoX will automatically detect and read WAV files with the
+            non-standard header.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.WVE">
+            <summary>
+            Psion 8-bit A-law. Used on Psion SIBO PDAs (Series 3 and similar). This format is deprecated in SoX, but will
+            continue to be used in libsndfile.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.FileType.XA">
+            <summary>
+            Maxis XA files. These are 16-bit ADPCM audio files used by Maxis games. Writing .xa files is currently not
+            supported.
+            </summary>
+        </member>
+        <member name="T:SoxSharp.EncodingType">
+            <summary>
+            Encoding type.
+            </summary>
+        </member>
+        <member name="T:SoxSharp.ByteOrderType">
+            <summary>
+            Byte order type.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.ByteOrderType.BigEndian">
+            <summary>
+            Big endian byte order.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.ByteOrderType.LittleEndian">
+            <summary>
+            Little endian byte order.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.ByteOrderType.Swap">
+            <summary>
+            Swap the current byte order.
+            </summary>
+        </member>
+        <member name="T:SoxSharp.LogLevelType">
+            <summary>
+            SoX log message level.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.LogLevelType.Warning">
+            <summary>
+            Warning message.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.LogLevelType.Info">
+            <summary>
+            Information message.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.LogLevelType.Debug">
+            <summary>
+            Debug message.
+            </summary>
+        </member>
+        <member name="T:SoxSharp.CombinationType">
+            <summary>
+            How SoX’s input combiner shall combine multiple input files.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.CombinationType.Default">
+            <summary>
+            Use the default combination type (<see cref="F:SoxSharp.CombinationType.Concatenate"/> for Process and Record
+            and <see cref="F:SoxSharp.CombinationType.Sequence"/> for Play).
+            </summary>
+        </member>
+        <member name="F:SoxSharp.CombinationType.Concatenate">
+            <summary>
+            Concatenate all input files (the default for process and record).
+            Input files must have the same number of channels. The audio from each input will be concatenated
+            in the order given to form the output file.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.CombinationType.Merge">
+            <summary>
+            Merge multiple input files.
+            The number of channels in each input file need not be the same. A merged audio file comprises all
+            of the channels from all of the input files. For example, two mono files could be merged to form
+            one stereo file. The first and second mono files would become the left and right channels of the
+            stereo file. Un-merging is possible using multiple invocations of SoX with the remix effect.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.CombinationType.Mix">
+            <summary>
+            Mix multiple input files.
+            The number of channels in each input file need not be the same, but SoX will issue a warning if they
+            are not and some channels in the output file will not contain audio from every input file. A mixed
+            audio file cannot be un-mixed without reference to the original input files.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.CombinationType.MixPower">
+            <summary>
+            Mix to equal power multiple input files.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.CombinationType.Multiply">
+            <summary>
+            Multiply samples of corresponding channels from all input files.
+            Sample values of corresponding channels are treated as numbers in the interval −1 to +1. If the
+            number of channels in the input files is not the same, the missing channels are considered
+            to contain all zero.
+            </summary>
+        </member>
+        <member name="F:SoxSharp.CombinationType.Sequence">
+            <summary>
+            Sequence all input files (the default for play).
+            It is similar to <see cref="F:SoxSharp.CombinationType.Concatenate"/> in that the audio from each input file
+            is sent serially to the output file. However, here the output file may be closed and reopened at
+            the corresponding transition between input files.
+            </summary>
+        </member>
+        <member name="T:SoxSharp.FormattedSize">
+            <summary>
+            Utility class that converts a a SoX file size string (an integer or double value, optionally followed by a k, M or G character) to a numeric value.
+            </summary>
+        </member>
+        <member name="M:SoxSharp.FormattedSize.ToUInt64(System.String)">
+            <summary>
+            Converts a SoX file size string to a <see cref="T:System.UInt64"/> value.
+            </summary>
+            <param name="formattedSize">Size string.</param>
+            <returns>Numeric value.</returns>
+        </member>
+        <member name="M:SoxSharp.FormattedSize.ToUInt32(System.String)">
+            <summary>
+            Converts a SoX file size string to a <see cref="T:System.UInt32"/> value.
+            </summary>
+            <param name="formattedSize">Size string.</param>
+            <returns>Numeric value.</returns>
+        </member>
+        <member name="M:SoxSharp.SoxProcess.Create(System.String)">
+            <summary>
+            Create a new <see cref="T:SoxSharp.SoxProcess"/> instance prepared to run SoX.
+            </summary>
+            <returns>The SoX process instance.</returns>
+        </member>
+    </members>
+</doc>

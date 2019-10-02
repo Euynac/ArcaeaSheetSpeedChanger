@@ -1,0 +1,21 @@
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\bin\Debug\arcaea sheetSpeedChanger.exe.config
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\bin\Debug\arcaea sheetSpeedChanger.exe
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\bin\Debug\arcaea sheetSpeedChanger.pdb
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\arcaea_sheetSpeedChanger.SheetChanger.resources
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\arcaea_sheetSpeedChanger.Properties.Resources.resources
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\arcaea sheetSpeedChanger.csproj.GenerateResource.cache
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\arcaea sheetSpeedChanger.csproj.CoreCompileInputs.cache
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\arcaea sheetSpeedChanger.exe
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\arcaea sheetSpeedChanger.pdb
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\Euynac.UI.ControlLayer.resources
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\arcaea_sheetSpeedChanger.ArcaeaDialog.resources
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\arcaea sheetSpeedChanger.csproj.Fody.CopyLocal.cache
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\bin\Debug\arcaea sheetSpeedChanger.exe.manifest
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\bin\Debug\arcaea sheetSpeedChanger.application
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\arcaea sheetSpeedChanger.TrustInfo.xml
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\arcaea sheetSpeedChanger.exe.manifest
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\arcaea sheetSpeedChanger.application
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\arcaea sheetSpeedChanger.csprojAssemblyReference.cache
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\bin\Debug\NAudio.xml
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\arcaea sheetSpeedChanger.csproj.CopyComplete
+C:\Users\dell\Desktop\Csharp\arcaea sheetSpeedChanger\arcaea sheetSpeedChanger\bin\Debug\Utility\SoundSpeedChange\SoundTouch.dll
