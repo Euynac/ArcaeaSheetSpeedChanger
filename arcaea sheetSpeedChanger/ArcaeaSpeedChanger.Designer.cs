@@ -40,6 +40,7 @@
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.barLineCheckBox = new System.Windows.Forms.CheckBox();
             this.rapidPackCheckBox = new System.Windows.Forms.CheckBox();
+            this.combineJsonBtn = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // openFileButton
@@ -167,6 +168,17 @@
             this.rapidPackCheckBox.UseVisualStyleBackColor = false;
             this.rapidPackCheckBox.CheckedChanged += new System.EventHandler(this.RapidPackCheckBox_CheckedChanged);
             // 
+            // combineJsonBtn
+            // 
+            this.combineJsonBtn.BackColor = System.Drawing.Color.Transparent;
+            this.combineJsonBtn.Location = new System.Drawing.Point(163, 517);
+            this.combineJsonBtn.Name = "combineJsonBtn";
+            this.combineJsonBtn.Size = new System.Drawing.Size(116, 22);
+            this.combineJsonBtn.TabIndex = 21;
+            this.combineJsonBtn.Text = "合并json";
+            this.combineJsonBtn.UseSelectable = true;
+            this.combineJsonBtn.Click += new System.EventHandler(this.CombineJsonBtn_Click);
+            // 
             // SheetChanger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -175,6 +187,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(942, 629);
             this.ControlBox = false;
+            this.Controls.Add(this.combineJsonBtn);
             this.Controls.Add(this.rapidPackCheckBox);
             this.Controls.Add(this.barLineCheckBox);
             this.Controls.Add(this.progressBar);
@@ -211,6 +224,7 @@
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.CheckBox barLineCheckBox;
         private System.Windows.Forms.CheckBox rapidPackCheckBox;
+        private MetroFramework.Controls.MetroButton combineJsonBtn;
     }
 }
 

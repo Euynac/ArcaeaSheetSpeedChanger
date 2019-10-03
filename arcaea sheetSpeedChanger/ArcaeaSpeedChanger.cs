@@ -126,6 +126,33 @@ namespace ArcaeaSpeedChanger
         #endregion
 
         #region 界面控件事件操作
+        private void CombineJsonBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "谱面文件(*.txt;*.aff)|*.txt;*.aff";
+            openFileDialog.Multiselect = true; //是否可以多选
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                StringBuilder combinedJson = new StringBuilder();
+                //多个文件
+                string[] jsonNames = openFileDialog.FileNames;
+                for (int i = 0; i < jsonNames.Length; i++)
+                {
+                    StringBuilder tmp = EuyFile.ReadFile(jsonNames[i]);
+                    if (i == 0)
+                    {
+                        combinedJson = tmp;
+                    }
+                    else
+                    {
+                        combinedJson.Append(new StringBuilder(",\n" + tmp));
+                    }
+                }
+                EuyFile.WriteFile(Directory.GetParent(jsonNames[0]).FullName + "\\combinedJson.txt", combinedJson);
+                ShowArcaeaDialog("合并json成功！");
+            }
+
+        }
         private void SoundCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             this.soundUrl = null;
@@ -145,14 +172,18 @@ namespace ArcaeaSpeedChanger
         {
             if (rapidPackCheckBox.Checked)
             {
-                if (!songListGenerator.isInitialized && !songListGenerator.OpenSonglist("songlist"))
+                if (!songListGenerator.isInitialized)
                 {
-                    ShowArcaeaDialog("songlist文件不存在！将按照默认值生成json");
+                    if (!songListGenerator.OpenSonglist("songlist"))
+                    {
+                        ShowArcaeaDialog("songlist文件不存在！将按照默认值生成json");
+                    }
+                    else
+                    {
+                        ShowArcaeaDialog("成功导入songlist文件，将按songlist信息写入相应json");
+                    }
+                    
                 } 
-                else
-                {
-                    ShowArcaeaDialog("成功导入songlist文件，将按songlist信息写入相应json");
-                }
                 this.barLineCheckBox.Checked = true;
                 this.soundCheckBox.Checked = true;
                 this.barLineCheckBox.Enabled = false;
@@ -671,6 +702,7 @@ namespace ArcaeaSpeedChanger
         }
         #endregion
 
+      
     }
     public static class GlobalVariable //C#无全局变量 只好用静态类了
     {

@@ -105,7 +105,9 @@ namespace Euynac.Utility
             {
                 FileStream fileStream = new FileStream(path, FileMode.Open);
                 StreamReader reader = new StreamReader(fileStream);
-                return new StringBuilder(reader.ReadToEnd());
+                StringBuilder result = new StringBuilder(reader.ReadToEnd());
+                reader.Close();
+                return result;
             }
             catch (FileNotFoundException)
             {
