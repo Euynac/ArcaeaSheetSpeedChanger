@@ -4,7 +4,7 @@
   <description asmv2:iconFile="favicon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="ArcaeaSpeedChanger" version="3.3.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="ArcaeaSpeedChanger" version="3.3.3.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="ArcaeaSpeedChanger.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,13 +43,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ArcaeaSpeedChanger.exe" size="2594776">
-      <assemblyIdentity name="ArcaeaSpeedChanger" version="3.3.0.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="ArcaeaSpeedChanger" version="3.3.3.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AMdK/j2MzFt1N7Ptp3rutrZhcp1j4wnbUJfpug3/Z3k=</dsig:DigestValue>
+        <dsig:DigestValue>P3v4zWp9OjihIuiIwEsUFkz1ygrO1PKOBydwoxc7Fm0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

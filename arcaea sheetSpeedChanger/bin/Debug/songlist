@@ -1130,7 +1130,7 @@
           "chartDesigner": "ToastErr0r",
           "jacketDesigner": "",
           "rating": 9,
-          "plusFingers": true
+          "plusFingers": 0
         }
       ]
     }
@@ -2177,14 +2177,14 @@
           "chartDesigner": "迷路第二層",
           "jacketDesigner": "シエラ",
           "rating": 9,
-          "plusFingers": true
+          "plusFingers": 0
         },
         {
           "ratingClass": 2,
           "chartDesigner": "迷路深層",
           "jacketDesigner": "シエラ",
           "rating": 11,
-          "plusFingers": true
+          "plusFingers": 0
         }
       ]
     }
@@ -3350,7 +3350,7 @@
           "chartDesigner": "Zero Sky",
           "jacketDesigner": "シエラ",
           "rating": 10,
-          "plusFingers": true
+          "plusFingers": 0
         }
       ]
     }
@@ -3383,14 +3383,14 @@
           "chartDesigner": "Absolute Paradox",
           "jacketDesigner": "シエラ",
           "rating": 9,
-          "plusFingers": true
+          "plusFingers": 0
         },
         {
           "ratingClass": 2,
           "chartDesigner": "Paradox Zero",
           "jacketDesigner": "シエラ",
           "rating": 11,
-          "plusFingers": true
+          "plusFingers": 0
         }
       ]
     }

@@ -37,7 +37,7 @@ namespace Arcaea.Song
             /// <summary>
             /// 
             /// </summary>
-            //public int plusFingers { get; set; } //这啥
+            public int plusFingers { get; set; } //这啥
         }
 
         public class SongsItem
@@ -182,19 +182,19 @@ namespace Arcaea.Song
                 past.chartDesigner = "Arcaea";
                 past.jacketDesigner = "lowrio";
                 past.rating = 1;
-                //past.plusFingers = 0;
+                past.plusFingers = 0;
                 DifficultiesItem present = new DifficultiesItem();
                 present.ratingClass = 1;
                 present.chartDesigner = prsChartDesigner;
                 present.jacketDesigner = prsJacketDesigner;
                 present.rating = prsRating;
-                //present.plusFingers = 0;
+                present.plusFingers = 0;
                 DifficultiesItem future = new DifficultiesItem();
                 future.ratingClass = 2;
                 future.chartDesigner = ftrChartDesigner;
                 future.jacketDesigner = ftrJacketDesigner;
                 future.rating = ftrRating;
-                //future.plusFingers = 0;
+                future.plusFingers = 0;
                 difficulties.Add(past);
                 difficulties.Add(present);
                 difficulties.Add(future);

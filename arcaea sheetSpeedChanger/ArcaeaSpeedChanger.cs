@@ -284,8 +284,10 @@ namespace ArcaeaSpeedChanger
         #endregion
 
         #region 音频变速与多线程相关
-        public void ChangeMp3Speed()
+        public void ChangeAudioSpeed()
         {
+            openFileButton.Enabled = false;
+            generateButton.Enabled = false;
             Control.CheckForIllegalCrossThreadCalls = false;//如果不会好几个线程同时操作一个控件就可使用
             Thread thread = ProgressListener();
             thread.Start();
@@ -406,11 +408,9 @@ namespace ArcaeaSpeedChanger
                         {
                             if (this.soundUrl != null)
                             {
-                                openFileButton.Enabled = false;
-                                generateButton.Enabled = false;
                                 if (!rapidPack)
                                 {
-                                    ChangeMp3Speed();
+                                    ChangeAudioSpeed();
                                 }
                                 else
                                 {
@@ -473,8 +473,8 @@ namespace ArcaeaSpeedChanger
             //Euynac.Utility.File.WriteFile(songlistPath + "\\" + "1.aff", sheet);
             //Euynac.Utility.File.WriteFile(songlistPath + "\\" + "0.aff", sheet);
 
-            //生成音频
-            ChangeMp3Speed();
+            ////生成音频
+            ChangeAudioSpeed();
             //生成图片
             if (File.Exists(sheetDirectory + "base.jpg") && File.Exists(sheetDirectory + "base_256.jpg"))
             {
