@@ -32,6 +32,7 @@ namespace ArcaeaSpeedChanger
         private string soundDirectory;//末尾带\
 
         //快速打包
+        private bool arcaoid = false;
         private bool rapidPack = false;
         private string packPath;//末尾不带\
         private int nowPack = 0; //快速打包 2为带小节线变速，1为原速
@@ -59,6 +60,8 @@ namespace ArcaeaSpeedChanger
             rapidPackCheckBox.ForeColor = Color.White;
             soundCheckBox.Font = GlobalVar.arcaeaFont.GetFont(9);
             soundCheckBox.ForeColor = Color.White;
+            arcaoidCheckBox.Font = GlobalVar.arcaeaFont.GetFont(9);
+            arcaoidCheckBox.ForeColor = Color.White;
             barLineCheckBox.Font = GlobalVar.arcaeaFont.GetFont(9);
             barLineCheckBox.ForeColor = Color.White;
             GlobalVar.arcaeaFont.ArcaeaButton(generateButton, 18);
@@ -167,6 +170,17 @@ namespace ArcaeaSpeedChanger
                 this.label2.Text = "谱面路径";
             }
 
+        }
+        private void ArcaoidCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (arcaoidCheckBox.Checked)
+            {
+                this.arcaoid = true;
+            }
+            else
+            {
+                this.arcaoid = false;
+            }
         }
         private void RapidPackCheckBox_CheckedChanged(object sender, EventArgs e)
         {
@@ -447,7 +461,6 @@ namespace ArcaeaSpeedChanger
 
         private void RapidPackSongList()//快速打包 2.aff为带小节线变速 1.aff无小节线变速
         {
-            //生成songlist
             string songOriginID = Directory.GetParent(this.sheetUrl).Name;
             string songName = songOriginID + " " + this.speed.ToString() + "x";
             string directoryName = songOriginID + this.speed.ToString("f2").Replace(".", "");
@@ -461,8 +474,17 @@ namespace ArcaeaSpeedChanger
                     ShowArcaeaDialog("歌曲信息未在songlist中查找到，将按照默认值生成json");
                 }
 
-            string songlist = songListGenerator.RapidGenerateSonglist(songOriginID, " " + this.speed.ToString() + "x", directoryName, songName);
-            Euynac.Utility.EuyFile.WriteFile(sheetDirectory + songName + ".txt", new StringBuilder(songlist));
+            //生成Arcaoid文件
+            if(arcaoid)
+            {
+                StringBuilder arcaoidData = songListGenerator.RapidGenerateArcaoid(songOriginID, " " + this.speed.ToString() + "x", directoryName, songName);
+                EuyFile.WriteFile(songlistPath + "\\ARCAOID.txt", arcaoidData);
+            }
+            else    //生成songlist
+            {
+                string songlist = songListGenerator.RapidGenerateSonglist(songOriginID, " " + this.speed.ToString() + "x", directoryName, songName);
+                Euynac.Utility.EuyFile.WriteFile(sheetDirectory + songName + ".txt", new StringBuilder(songlist));
+            }
 
             ////生成aff
             //nowPack = 2;//打包2.aff 
@@ -480,8 +502,11 @@ namespace ArcaeaSpeedChanger
             {
                 if(!File.Exists(packPath + "\\base.jpg"))
                     File.Copy(sheetDirectory + "base.jpg", packPath + "\\base.jpg");
-                if(!File.Exists(packPath + "\\base_256.jpg"))
-                    File.Copy(sheetDirectory + "base_256.jpg", packPath + "\\base_256.jpg");
+                if (!arcaoid)
+                {
+                    if (!File.Exists(packPath + "\\base_256.jpg"))
+                        File.Copy(sheetDirectory + "base_256.jpg", packPath + "\\base_256.jpg");
+                }
             }
         }
         #endregion
@@ -700,9 +725,10 @@ namespace ArcaeaSpeedChanger
             //MessageBox.Show("啊咧？被您找到BUG了...联系七奏870838080 协助修复BUG" + Environment.NewLine + "错误信息:" + e.Message);
             ShowArcaeaDialog("啊咧？被您找到BUG了..." + Environment.NewLine + "欢迎联系七奏QQ870838080协助修复");
         }
+
         #endregion
 
-      
+
     }
     public static class GlobalVariable //C#无全局变量 只好用静态类了
     {

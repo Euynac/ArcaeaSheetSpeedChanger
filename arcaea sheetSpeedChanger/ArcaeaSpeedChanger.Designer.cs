@@ -41,6 +41,7 @@
             this.barLineCheckBox = new System.Windows.Forms.CheckBox();
             this.rapidPackCheckBox = new System.Windows.Forms.CheckBox();
             this.combineJsonBtn = new MetroFramework.Controls.MetroButton();
+            this.arcaoidCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // openFileButton
@@ -179,6 +180,18 @@
             this.combineJsonBtn.UseSelectable = true;
             this.combineJsonBtn.Click += new System.EventHandler(this.CombineJsonBtn_Click);
             // 
+            // arcaoidCheckBox
+            // 
+            this.arcaoidCheckBox.AutoSize = true;
+            this.arcaoidCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.arcaoidCheckBox.Location = new System.Drawing.Point(163, 573);
+            this.arcaoidCheckBox.Name = "arcaoidCheckBox";
+            this.arcaoidCheckBox.Size = new System.Drawing.Size(115, 22);
+            this.arcaoidCheckBox.TabIndex = 22;
+            this.arcaoidCheckBox.Text = "Arcaoid版";
+            this.arcaoidCheckBox.UseVisualStyleBackColor = false;
+            this.arcaoidCheckBox.CheckedChanged += new System.EventHandler(this.ArcaoidCheckBox_CheckedChanged);
+            // 
             // SheetChanger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -187,6 +200,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(942, 629);
             this.ControlBox = false;
+            this.Controls.Add(this.arcaoidCheckBox);
             this.Controls.Add(this.combineJsonBtn);
             this.Controls.Add(this.rapidPackCheckBox);
             this.Controls.Add(this.barLineCheckBox);
@@ -225,6 +239,7 @@
         private System.Windows.Forms.CheckBox barLineCheckBox;
         private System.Windows.Forms.CheckBox rapidPackCheckBox;
         private MetroFramework.Controls.MetroButton combineJsonBtn;
+        private System.Windows.Forms.CheckBox arcaoidCheckBox;
     }
 }
 

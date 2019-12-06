@@ -129,6 +129,41 @@ namespace Arcaea.Song
             {
                 return songsMap.ContainsKey(originSongID);
             }
+
+            public StringBuilder RapidGenerateArcaoid(string originSongID, string speed, string songID, string songName, bool randomFun = false)
+            {
+                string songTitle = songName;
+                string artist = "Arcaea";
+                string bpm = "168";
+                int prsRating = 9;
+                string ftrChartDesigner = "Arcaea";
+                int ftrRating = 10;
+                if (songsMap != null && songsMap.ContainsKey(originSongID))
+                {
+                    songTitle = songsMap[originSongID].title_localized.en;
+                    artist = songsMap[originSongID].artist;
+                    bpm = songsMap[originSongID].bpm;
+                    prsRating = songsMap[originSongID].difficulties[1].rating;
+                    ftrChartDesigner = songsMap[originSongID].difficulties[2].chartDesigner;
+                    ftrRating = songsMap[originSongID].difficulties[2].rating;
+                }
+
+                StringBuilder arcaoidData = new StringBuilder();
+                songTitle = this.isOfficial ? songTitle + speed : songName;
+                arcaoidData.Append(songTitle + '\n');
+                arcaoidData.Append(ftrChartDesigner + '\n');
+                arcaoidData.Append(artist + '\n');
+                arcaoidData.Append(bpm + '\n');
+                arcaoidData.Append(ftrRating.ToString() + '\n');
+                arcaoidData.Append(prsRating.ToString() + '\n');
+                arcaoidData.Append("?\n");
+                arcaoidData.Append("CONFLICT\n");
+                arcaoidData.Append(artist + '\n');
+                arcaoidData.Append("CUSTOMBG=TRUE");
+                return arcaoidData;
+
+            }
+
             public string RapidGenerateSonglist(string originSongID, string speed, string songID, string songName, bool randomFun = false)
             {
                 string songTitle = songName;
