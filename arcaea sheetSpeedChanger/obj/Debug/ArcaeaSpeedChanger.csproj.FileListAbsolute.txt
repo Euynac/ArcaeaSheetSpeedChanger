@@ -64,7 +64,6 @@ C:\Users\dell\Desktop\学习\Csharp\ArcaeaSheetSpeedChanger\ArcaeaSheetSpeedChan
 C:\Users\dell\Desktop\学习\Csharp\ArcaeaSheetSpeedChanger\ArcaeaSheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\ArcaeaSpeedChanger.Properties.Resources.resources
 C:\Users\dell\Desktop\学习\Csharp\ArcaeaSheetSpeedChanger\ArcaeaSheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\Euynac.WinformUI.ControlLayer.resources
 C:\Users\dell\Desktop\学习\Csharp\ArcaeaSheetSpeedChanger\ArcaeaSheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\ArcaeaSpeedChanger.csproj.GenerateResource.cache
-C:\Users\dell\Desktop\学习\Csharp\ArcaeaSheetSpeedChanger\ArcaeaSheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\ArcaeaSpeedChanger.csproj.CoreCompileInputs.cache
 C:\Users\dell\Desktop\学习\Csharp\ArcaeaSheetSpeedChanger\ArcaeaSheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\ArcaeaSpeedChanger.csproj.Fody.CopyLocal.cache
 C:\Users\dell\Desktop\学习\Csharp\ArcaeaSheetSpeedChanger\ArcaeaSheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\ArcaeaSpeedChanger.TrustInfo.xml
 C:\Users\dell\Desktop\学习\Csharp\ArcaeaSheetSpeedChanger\ArcaeaSheetSpeedChanger\arcaea sheetSpeedChanger\obj\Debug\ArcaeaSpeedChanger.exe.manifest
