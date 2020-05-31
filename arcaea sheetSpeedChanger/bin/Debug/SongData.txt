@@ -1,0 +1,415 @@
+0,1,Nitro,,False,Sayonara Hatsukoi,sayonarahatsukoi,,base,0,,REDSHiFT,,178,178,1487980800
+1,4,Nitro,,False,Sayonara Hatsukoi,sayonarahatsukoi,,base,0,,REDSHiFT,,178,178,1487980800
+2,6,Toaster,,False,Sayonara Hatsukoi,sayonarahatsukoi,,base,0,,REDSHiFT,,178,178,1487980800
+0,4,Toaster,,False,Lost Civilization,lostcivilization,,base,1,,Laur vs CK,,75 - 210,210,1487980808
+1,7,Toaster,,False,Lost Civilization,lostcivilization,,base,1,,Laur vs CK,,75 - 210,210,1487980808
+2,9,Toaster,,False,Lost Civilization,lostcivilization,,base,1,,Laur vs CK,,75 - 210,210,1487980808
+0,4,Nitro,Koyama Mai,False,GOODTEK (Arcaea Edit),goodtek,,base,0,,EBIMAYO,,190,190,1487980809
+1,6,Nitro,Koyama Mai,False,GOODTEK (Arcaea Edit),goodtek,,base,0,,EBIMAYO,,190,190,1487980809
+2,9,Nitro,Koyama Mai,False,GOODTEK (Arcaea Edit),goodtek,,base,0,,EBIMAYO,,190,190,1487980809
+0,3,Toaster,Khronetic,False,cry of viyella,viyella,core,core,1,,Laur,,75 - 180,180,1487980811
+1,6,Toaster,Khronetic,False,cry of viyella,viyella,core,core,1,,Laur,,75 - 180,180,1487980811
+2,8,Toaster,Khronetic,False,cry of viyella,viyella,core,core,1,,Laur,,75 - 180,180,1487980811
+0,2,Nitro,,False,Rise,rise,,base,0,,Combatplayer,,140,140,1487980803
+1,4,Nitro,,False,Rise,rise,,base,0,,Combatplayer,,140,140,1487980803
+2,7,Nitro,,False,Rise,rise,,base,0,,Combatplayer,,140,140,1487980803
+0,3,Nitro,,False,Lucifer,lucifer,,base,1,,chitose,,165,165,1487980804
+1,5,Nitro,,False,Lucifer,lucifer,,base,1,,chitose,,165,165,1487980804
+2,8,Nitro,,False,Lucifer,lucifer,,base,1,,chitose,,165,165,1487980804
+0,1,Toaster,,False,Fairytale,fairytale,,base,0,,chitose,,189,189,1487980801
+1,3,Toaster,,False,Fairytale,fairytale,,base,0,,chitose,,189,189,1487980801
+2,7,Toaster,,False,Fairytale,fairytale,,base,0,,chitose,,189,189,1487980801
+0,3,Toaster,,False,I've heard it said,hearditsaid,core,core,0,,Combatplayer,,165,165,1487980812
+1,6,Toaster,,False,I've heard it said,hearditsaid,core,core,0,,Combatplayer,,165,165,1487980812
+2,8,Toaster,,False,I've heard it said,hearditsaid,core,core,0,,Combatplayer,,165,165,1487980812
+0,3,Toaster,,False,Babaroque,babaroque,,base,0,,cYsmix,,136,136,1487980807
+1,6,Toaster,,False,Babaroque,babaroque,,base,0,,cYsmix,,136,136,1487980807
+2,8,Toaster,,False,Babaroque,babaroque,,base,0,,cYsmix,,136,136,1487980807
+0,2,Nitro,Frums,False,memoryfactory.lzh,memoryfactory,core,core,0,,Frums,,100,180,1487980813
+1,5,Nitro,Frums,False,memoryfactory.lzh,memoryfactory,core,core,0,,Frums,,100,180,1487980813
+2,8,Nitro,Frums,False,memoryfactory.lzh,memoryfactory,core,core,0,,Frums,,100,180,1487980813
+0,2,Toaster,,False,Snow White,snowwhite,,base,0,,Puru,,150,150,1487980805
+1,5,Toaster,,False,Snow White,snowwhite,,base,0,,Puru,,150,150,1487980805
+2,8,Toaster,,False,Snow White,snowwhite,,base,0,,Puru,,150,150,1487980805
+0,4,Nitro,SERXPHIS,False,Relentless,relentless,core,core,1,,Akira Complex,,174,174,1487980814
+1,6,Nitro,SERXPHIS,False,Relentless,relentless,core,core,1,,Akira Complex,,174,174,1487980814
+2,8,Nitro,SERXPHIS,False,Relentless,relentless,core,core,1,,Akira Complex,,174,174,1487980814
+0,3,Nitro,RiceGnat,False,Shades of Light in a Transcendent Realm,shadesoflight,,base,0,,ak+q,,170,170,1487980806
+1,6,Nitro,RiceGnat,False,Shades of Light in a Transcendent Realm,shadesoflight,,base,0,,ak+q,,170,170,1487980806
+2,8,Nitro,RiceGnat,False,Shades of Light in a Transcendent Realm,shadesoflight,,base,0,,ak+q,,170,170,1487980806
+0,2,Nitro,Koyama Mai,False,Vexaria,vexaria,,base,0,,ak+q,,180,180,1487980802
+1,5,Nitro,Koyama Mai,False,Vexaria,vexaria,,base,0,,ak+q,,180,180,1487980802
+2,7,Nitro,Koyama Mai,False,Vexaria,vexaria,,base,0,,ak+q,,180,180,1487980802
+0,4,Nitro,deel,False,Essence of Twilight,essenceoftwilight,core,core,1,,ak+q,,164,164,1487980816
+1,7,Nitro,deel,False,Essence of Twilight,essenceoftwilight,core,core,1,,ak+q,,164,164,1487980816
+2,9,Nitro,deel,False,Essence of Twilight,essenceoftwilight,core,core,1,,ak+q,,164,164,1487980816
+0,5,-chartaesthesia-,Khronetic,False,qualia -ideaesthesia-,qualia,,base,1,,nitro,,144,144,1487980810
+1,7,-chartaesthesia-,Khronetic,False,qualia -ideaesthesia-,qualia,,base,1,,nitro,,144,144,1487980810
+2,9,-chartaesthesia-,Khronetic,False,qualia -ideaesthesia-,qualia,,base,1,,nitro,,144,144,1487980810
+0,4,東星,シエラ,False,PRAGMATISM,pragmatism,core,core,0,,Laur,pragmatism,174,174,1487980817
+1,8,東星,シエラ,False,PRAGMATISM,pragmatism,core,core,0,,Laur,pragmatism,174,174,1487980817
+2,10,東星,シエラ,False,PRAGMATISM,pragmatism,core,core,0,,Laur,pragmatism,174,174,1487980817
+0,5,夜浪,シエラ,False,Sheriruth,sheriruth,core,core,1,,Team Grimoire,sheriruth,185,185,1487980818
+1,7,夜浪,シエラ,False,Sheriruth,sheriruth,core,core,1,,Team Grimoire,sheriruth,185,185,1487980818
+2,10,夜浪,シエラ,False,Sheriruth,sheriruth,core,core,1,,Team Grimoire,sheriruth,185,185,1487980818
+0,2,Nitro,mins,False,Lumia,lumia,core,core,0,,sky_delta,,180,180,1487980815
+1,6,Nitro,mins,False,Lumia,lumia,core,core,0,,sky_delta,,180,180,1487980815
+2,8,Toaster missing Nitro.,mins,False,Lumia,lumia,core,core,0,,sky_delta,,180,180,1487980815
+0,3,Toaster,,False,Dement ~after legend~,dement,,base,1,,Lunatic Sounds,,210,210,1489968000
+1,6,Toaster,,False,Dement ~after legend~,dement,,base,1,,Lunatic Sounds,,210,210,1489968000
+2,7,Toaster,,False,Dement ~after legend~,dement,,base,1,,Lunatic Sounds,,210,210,1489968000
+0,2,Nitro,,False,Dandelion,dandelion,,base,0,,Farhan,,169,169,1489968000
+1,6,Nitro,,False,Dandelion,dandelion,,base,0,,Farhan,,169,169,1489968000
+2,8,Nitro,,False,Dandelion,dandelion,,base,0,,Farhan,,169,169,1489968000
+0,2,Toaster,Khronetic,False,Anökumene,anokumene,,base,1,,Jun Kuroda,,186,186,1491868801
+1,6,Toaster,Khronetic,False,Anökumene,anokumene,,base,1,,Jun Kuroda,,186,186,1491868801
+2,9,Toaster,Khronetic,False,Anökumene,anokumene,,base,1,,Jun Kuroda,,186,186,1491868801
+0,1,Nitro,Tagtraume,False,Infinity Heaven,infinityheaven,,base,0,,HyuN,,160,160,1491868800
+1,5,Nitro,Tagtraume,False,Infinity Heaven,infinityheaven,,base,0,,HyuN,,160,160,1491868800
+2,7,Nitro,Tagtraume,False,Infinity Heaven,infinityheaven,,base,0,,HyuN,,160,160,1491868800
+0,4,Party Toaster,アサヤ,False,Party Vinyl,partyvinyl,shiawase,shiawase,0,,モリモリあつし,shiawase,132,132,1494547204
+1,7,Party Toaster,アサヤ,False,Party Vinyl,partyvinyl,shiawase,shiawase,0,,モリモリあつし,shiawase,132,132,1494547204
+2,9,Party Toaster,アサヤ,False,Party Vinyl,partyvinyl,shiawase,shiawase,0,,モリモリあつし,shiawase,132,132,1494547204
+0,2,Nitro,yoshimo,False,Flashback,flashback,shiawase,shiawase,0,,ARForest,shiawase,195,195,1494547202
+1,5,Nitro,yoshimo,False,Flashback,flashback,shiawase,shiawase,0,,ARForest,shiawase,195,195,1494547202
+2,8,Nitro,yoshimo,False,Flashback,flashback,shiawase,shiawase,0,,ARForest,shiawase,195,195,1494547202
+0,3,N,アリスシャッハと魔法の楽団,False,Flyburg and Endroll|フライブルクとエンドロウル,flyburg,shiawase,shiawase,0,,アリスシャッハと魔法の楽団,shiawase,180,180,1494547203
+1,6,N,アリスシャッハと魔法の楽団,False,Flyburg and Endroll|フライブルクとエンドロウル,flyburg,shiawase,shiawase,0,,アリスシャッハと魔法の楽団,shiawase,180,180,1494547203
+2,9,NーHelix,アリスシャッハと魔法の楽団,False,Flyburg and Endroll|フライブルクとエンドロウル,flyburg,shiawase,shiawase,0,,アリスシャッハと魔法の楽団,shiawase,180,180,1494547203
+0,2,東星※紅空,シエラ,False,Nirv lucE,nirvluce,shiawase,shiawase,0,,しーけー,nirvluce,260,260,1494547205
+1,7,東星※紅空,シエラ,False,Nirv lucE,nirvluce,shiawase,shiawase,0,,しーけー,nirvluce,260,260,1494547205
+2,10,東星※紅空,シエラ,False,Nirv lucE,nirvluce,shiawase,shiawase,0,,しーけー,nirvluce,260,260,1494547205
+0,1,Nitro,ましろみ のあ,False,Paradise,paradise,shiawase,shiawase,0,,Sound Souler,shiawase,126,126,1494547201
+1,4,Nitro,ましろみ のあ,False,Paradise,paradise,shiawase,shiawase,0,,Sound Souler,shiawase,126,126,1494547201
+2,7,Nitro,ましろみ のあ,False,Paradise,paradise,shiawase,shiawase,0,,Sound Souler,shiawase,126,126,1494547201
+0,2,Nitro 2.0,,False,Brand new world,brandnewworld,,base,0,,U-ske,shiawase,160,160,1494547200
+1,4,Nitro 2.0,,False,Brand new world,brandnewworld,,base,0,,U-ske,shiawase,160,160,1494547200
+2,7,Nitro 2.0,,False,Brand new world,brandnewworld,,base,0,,U-ske,shiawase,160,160,1494547200
+0,3,ToastErr0r,,False,DataErr0r,dataerror,dataerror,single,1,,Lunatic Sounds,single_conflict,180,180,1496188802
+1,7,ToastErr0r,,False,DataErr0r,dataerror,dataerror,single,1,,Lunatic Sounds,single_conflict,180,180,1496188802
+2,9,ToastErr0r,,False,DataErr0r,dataerror,dataerror,single,1,,Lunatic Sounds,single_conflict,180,180,1496188802
+0,4,k//eternal,Khronetic,False,CROSS†SOUL,crosssoul,crosssoul,single,1,,HyuN feat. Syepias,single_conflict,200,200,1496188803
+1,7,k//eternal,Khronetic,False,CROSS†SOUL,crosssoul,crosssoul,single,1,,HyuN feat. Syepias,single_conflict,200,200,1496188803
+2,9,k//eternal,Khronetic,False,CROSS†SOUL,crosssoul,crosssoul,single,1,,HyuN feat. Syepias,single_conflict,200,200,1496188803
+0,3,Nitro,DJ Poyoshi,False,Your voice so... feat. Such,yourvoiceso,yourvoiceso,single,0,,PSYQUI,single_light,176,176,1496188804
+1,6,Nitro,DJ Poyoshi,False,Your voice so... feat. Such,yourvoiceso,yourvoiceso,single,0,,PSYQUI,single_light,176,176,1496188804
+2,9,Nitro,DJ Poyoshi,False,Your voice so... feat. Such,yourvoiceso,yourvoiceso,single,0,,PSYQUI,single_light,176,176,1496188804
+0,3,Kurorak,,False,Chronostasis,chronostasis,,base,1,,黒皇帝,,196,196,1496188800
+1,7,Kurorak,,False,Chronostasis,chronostasis,,base,1,,黒皇帝,,196,196,1496188800
+2,9,Kurorak,,False,Chronostasis,chronostasis,,base,1,,黒皇帝,,196,196,1496188800
+0,1,Nitro,白鳥怜,False,Kanagawa Cyber Culvert|神奈川電脳暗渠,kanagawa,,base,0,,南ゆに,,180,180,1496188801
+1,5,Nitro,白鳥怜,False,Kanagawa Cyber Culvert|神奈川電脳暗渠,kanagawa,,base,0,,南ゆに,,180,180,1496188801
+2,9,Nitro,白鳥怜,False,Kanagawa Cyber Culvert|神奈川電脳暗渠,kanagawa,,base,0,,南ゆに,,180,180,1496188801
+0,1,Kurorak,,False,Moonlight of Sand Castle,moonlightofsandcastle,dynamix,dynamix,0,,旅人E,dynamix_light,160,160,1498176001
+1,5,Kurorak,,False,Moonlight of Sand Castle,moonlightofsandcastle,dynamix,dynamix,0,,旅人E,dynamix_light,160,160,1498176001
+2,7,Kurorak,,False,Moonlight of Sand Castle,moonlightofsandcastle,dynamix,dynamix,0,,旅人E,dynamix_light,160,160,1498176001
+0,2,Nitro,,False,REconstruction,reconstruction,dynamix,dynamix,0,,Ryazan,dynamix_light,180,180,1498176002
+1,6,Nitro,,False,REconstruction,reconstruction,dynamix,dynamix,0,,Ryazan,dynamix_light,180,180,1498176002
+2,8,Nitro,,False,REconstruction,reconstruction,dynamix,dynamix,0,,Ryazan,dynamix_light,180,180,1498176002
+0,2,k//eternal,,False,Evoltex (poppi'n mix),evoltex,dynamix,dynamix,0,,Arch vs n3pu,dynamix_light,205,205,1498176003
+1,7,k//eternal,,False,Evoltex (poppi'n mix),evoltex,dynamix,dynamix,0,,Arch vs n3pu,dynamix_light,205,205,1498176003
+2,8,k//eternal,,False,Evoltex (poppi'n mix),evoltex,dynamix,dynamix,0,,Arch vs n3pu,dynamix_light,205,205,1498176003
+0,3,Nitro,,False,Oracle,oracle,dynamix,dynamix,1,,TQ☆,dynamix_conflict,152,152,1498176004
+1,5,Nitro,,False,Oracle,oracle,dynamix,dynamix,1,,TQ☆,dynamix_conflict,152,152,1498176004
+2,9,Nitro,,False,Oracle,oracle,dynamix,dynamix,1,,TQ☆,dynamix_conflict,152,152,1498176004
+0,4,τoastεr,,False,αterlβus,aterlbus,dynamix,dynamix,1,,Aoi,dynamix_conflict,202,202,1498176005
+1,7,τoastεr,,False,αterlβus,aterlbus,dynamix,dynamix,1,,Aoi,dynamix_conflict,202,202,1498176005
+2,10,τoastεr,,False,αterlβus,aterlbus,dynamix,dynamix,1,,Aoi,dynamix_conflict,202,202,1498176005
+0,2,小東星,yoshimo,False,Clotho and the stargazer|クロートーと星の観測者,clotho,,base,0,,しーけー,shiawase,230,230,1498176000
+1,5,小東星,yoshimo,False,Clotho and the stargazer|クロートーと星の観測者,clotho,,base,0,,しーけー,shiawase,230,230,1498176000
+2,7,小東星,yoshimo,False,Clotho and the stargazer|クロートーと星の観測者,clotho,,base,0,,しーけー,shiawase,230,230,1498176000
+0,2,Kurorak,Nano Kun,False,Impure Bird|不浄な白い鳥,impurebird,impurebird,single,0,,MIssionary,single_light,184,184,1500163201
+1,5,Kurorak,Nano Kun,False,Impure Bird|不浄な白い鳥,impurebird,impurebird,single,0,,MIssionary,single_light,184,184,1500163201
+2,9,Kurorak,Nano Kun,False,Impure Bird|不浄な白い鳥,impurebird,impurebird,single,0,,MIssionary,single_light,184,184,1500163201
+0,3,Toaster,Khronetic,False,Ignotus,ignotus,,base,1,,ak+q,,170,170,1500163200
+1,6,Toaster,Khronetic,False,Ignotus,ignotus,,base,1,,ak+q,,170,170,1500163200
+2,9,Toaster,Khronetic,False,Ignotus,ignotus,,base,1,,ak+q,,170,170,1500163200
+0,3,夜浪,softmode,False,Lethaeus,lethaeus,mirai,mirai,1,,Silentroom,lethaeus,155,155,1502323205
+1,6,夜浪,softmode,False,Lethaeus,lethaeus,mirai,mirai,1,,Silentroom,lethaeus,155,155,1502323205
+2,9,夜浪,softmode,False,Lethaeus,lethaeus,mirai,mirai,1,,Silentroom,lethaeus,155,155,1502323205
+0,1,Kurorak,橙乃遥,False,Romance Wars|vsキミ戦争,romancewars,mirai,mirai,0,,U-ske (feat. lueur),mirai_light,187,187,1502323202
+1,4,Kurorak,橙乃遥,False,Romance Wars|vsキミ戦争,romancewars,mirai,mirai,0,,U-ske (feat. lueur),mirai_light,187,187,1502323202
+2,7,Kurorak,橙乃遥,False,Romance Wars|vsキミ戦争,romancewars,mirai,mirai,0,,U-ske (feat. lueur),mirai_light,187,187,1502323202
+0,1,Nitro,T2Kazuya,False,Blossoms,blossoms,mirai,mirai,0,,T2Kazuya,mirai_light,138,138,1502323201
+1,4,Nitro,T2Kazuya,False,Blossoms,blossoms,mirai,mirai,0,,T2Kazuya,mirai_light,138,138,1502323201
+2,7,Nitro,T2Kazuya,False,Blossoms,blossoms,mirai,mirai,0,,T2Kazuya,mirai_light,138,138,1502323201
+0,2,Toaster,VMWT,False,Moonheart,moonheart,mirai,mirai,0,,翡乃イスカ,mirai_light,180,180,1502323203
+1,5,Toaster,VMWT,False,Moonheart,moonheart,mirai,mirai,0,,翡乃イスカ,mirai_light,180,180,1502323203
+2,8,Toaster,VMWT,False,Moonheart,moonheart,mirai,mirai,0,,翡乃イスカ,mirai_light,180,180,1502323203
+0,2,Haruba,RiceGnat,False,Genesis,genesis,mirai,mirai,1,,Iris,mirai_conflict,132,132,1502323204
+1,5,Haruba,RiceGnat,False,Genesis,genesis,mirai,mirai,1,,Iris,mirai_conflict,132,132,1502323204
+2,8,Haruba,RiceGnat,False,Genesis,genesis,mirai,mirai,1,,Iris,mirai_conflict,132,132,1502323204
+0,1,トーストピア  ~Utopia of Toast~,,False,Harutopia ~Utopia of Spring~|ハルトピア ~Utopia of Spring~,harutopia,,base,0,,A-zu-ra,shiawase,185,185,1502323200
+1,4,トーストピア  ~Utopia of Toast~,,False,Harutopia ~Utopia of Spring~|ハルトピア ~Utopia of Spring~,harutopia,,base,0,,A-zu-ra,shiawase,185,185,1502323200
+2,8,トーストピア  ~Utopia of Toast~,,False,Harutopia ~Utopia of Spring~|ハルトピア ~Utopia of Spring~,harutopia,,base,0,,A-zu-ra,shiawase,185,185,1502323200
+0,3,Nitroだー！！,シエラ,False,Auxesia,auxesia,auxesia,single,0,,ginkiha,auxesia,183,183,1502323206
+1,6,Nitroだー！,シエラ,False,Auxesia,auxesia,auxesia,single,0,,ginkiha,auxesia,183,183,1502323206
+2,9,Nitroだー！,シエラ,False,Auxesia,auxesia,auxesia,single,0,,ginkiha,auxesia,183,183,1502323206
+0,2,Toaster,YEONIE,False,Rabbit In The Black Room,rabbitintheblackroom,,base,1,,Rabbit House,,270,270,1505520000
+1,5,Toaster,YEONIE,False,Rabbit In The Black Room,rabbitintheblackroom,,base,1,,Rabbit House,,270,270,1505520000
+2,8,Toaster,YEONIE,False,Rabbit In The Black Room,rabbitintheblackroom,,base,1,,Rabbit House,,270,270,1505520000
+0,3,NITRO,yusi.,False,Modelista,modelista,modelista,single,0,,HiTECH NINJA,modelista,165,165,1505520001
+1,7,NITRO,yusi.,False,Modelista,modelista,modelista,single,0,,HiTECH NINJA,modelista,165,165,1505520001
+2,9,NITRO,yusi.,False,Modelista,modelista,modelista,single,0,,HiTECH NINJA,modelista,165,165,1505520001
+0,3,NiTRO,スズカミ,False,SOUNDWiTCH,soundwitch,yugamu,yugamu,1,,HATE,yugamu,170,170,1509667204
+1,6,NiTRO,スズカミ,False,SOUNDWiTCH,soundwitch,yugamu,yugamu,1,,HATE,yugamu,170,170,1509667204
+2,9,NiTRO,スズカミ,False,SOUNDWiTCH,soundwitch,yugamu,yugamu,1,,HATE,yugamu,170,170,1509667204
+0,3,Kurorak,Shionty,False,trappola bewitching|妖艶魔女 -trappola bewitching-,trappola,yugamu,yugamu,1,,gmtn.,yugamu,190,190,1509667205
+1,6,Kurorak,Shionty,False,trappola bewitching|妖艶魔女 -trappola bewitching-,trappola,yugamu,yugamu,1,,gmtn.,yugamu,190,190,1509667205
+2,9,k//urorak,Shionty,False,trappola bewitching|妖艶魔女 -trappola bewitching-,trappola,yugamu,yugamu,1,,gmtn.,yugamu,190,190,1509667205
+0,4,Toaster,SKT,False,Iconoclast,iconoclast,yugamu,yugamu,1,,Yamajet,yugamu,140,140,1509667203
+1,7,Toaster,SKT,False,Iconoclast,iconoclast,yugamu,yugamu,1,,Yamajet,yugamu,140,140,1509667203
+2,9,Toaster,SKT,False,Iconoclast,iconoclast,yugamu,yugamu,1,,Yamajet,yugamu,140,140,1509667203
+0,4,Toaster,horte,False,conflict,conflict,yugamu,yugamu,1,,siromaru + cranky,yugamu,160,160,1509667206
+1,7,Nitro,horte,False,conflict,conflict,yugamu,yugamu,1,,siromaru + cranky,yugamu,160,160,1509667206
+2,10,toaster + nitro,horte,False,conflict,conflict,yugamu,yugamu,1,,siromaru + cranky,yugamu,160,160,1509667206
+0,5,The Monolith,シエラ,False,Axium Crisis,axiumcrisis,yugamu,yugamu,1,,ak+q,axiumcrisis,170,170,1509667207
+1,8,The Monolith,シエラ,False,Axium Crisis,axiumcrisis,yugamu,yugamu,1,,ak+q,axiumcrisis,170,170,1509667207
+2,10,The Monolith,シエラ,False,Axium Crisis,axiumcrisis,yugamu,yugamu,1,,ak+q,axiumcrisis,170,170,1509667207
+0,6,迷路第一層,シエラ,False,Grievous Lady,grievouslady,yugamu,yugamu,1,,Team Grimoire vs Laur,grievouslady,210,210,1509667208
+1,9,迷路第二層,シエラ,False,Grievous Lady,grievouslady,yugamu,yugamu,1,,Team Grimoire vs Laur,grievouslady,210,210,1509667208
+2,11,迷路深層,シエラ,False,Grievous Lady,grievouslady,yugamu,yugamu,1,,Team Grimoire vs Laur,grievouslady,210,210,1509667208
+0,4,Nitro,,False,Dreamin' Attraction!!,dreaminattraction,,base,0,,翡乃イスカ,,205,205,1509667201
+1,7,Nitro,,False,Dreamin' Attraction!!,dreaminattraction,,base,0,,翡乃イスカ,,205,205,1509667201
+2,9,Nitro,,False,Dreamin' Attraction!!,dreaminattraction,,base,0,,翡乃イスカ,,205,205,1509667201
+0,4,-chartaesthesia- RED side,Khronetic,False,Red and Blue,redandblue,,base,1,,Silentroom,,150,150,1509667202
+1,7,side BLUE -chartaesthesia-,Khronetic,False,Red and Blue,redandblue,,base,1,,Silentroom,,150,150,1509667202
+2,9,-chartaesthesia-
+LEFT=BLUE RED=RIGHT ,Khronetic,False,Red and Blue,redandblue,,base,1,,Silentroom,,150,150,1509667202
+0,2,Toaster,,False,One Last Drive,onelastdrive,,base,0,,REDSHiFT,,154 - 175,175,1509667200
+1,5,Toaster,,False,One Last Drive,onelastdrive,,base,0,,REDSHiFT,,154 - 175,175,1509667200
+2,8,Toaster,,False,One Last Drive,onelastdrive,,base,0,,REDSHiFT,,154 - 175,175,1509667200
+0,3,Nitro,softmode,False,Surrender,surrender,surrender,stellights,0,,void,,152,152,1511481600
+1,6,Nitro,softmode,False,Surrender,surrender,surrender,stellights,0,,void,,152,152,1511481600
+2,8,Nitro,softmode,False,Surrender,surrender,surrender,stellights,0,,void,,152,152,1511481600
+0,4,k//eternal,シエラ,False,Yosakura Fubuki|夜桜吹雪,yozakurafubuki,yozakurafubuki,stellights,0,,A.SAKA,,172,172,1511481601
+1,7,k//eternal,シエラ,False,Yosakura Fubuki|夜桜吹雪,yozakurafubuki,yozakurafubuki,stellights,0,,A.SAKA,,172,172,1511481601
+2,9,k//eternal,シエラ,False,Yosakura Fubuki|夜桜吹雪,yozakurafubuki,yozakurafubuki,stellights,0,,A.SAKA,,172,172,1511481601
+0,4,夜浪 - Apocalypse,,False,cyanine,cyanine,lanota,lanota,1,,jioyi,lanota-conflict,182,182,1517443204
+1,7,夜浪,,False,cyanine,cyanine,lanota,lanota,1,,jioyi,lanota-conflict,182,182,1517443204
+2,10,夜浪,,False,cyanine,cyanine,lanota,lanota,1,,jioyi,lanota-conflict,182,182,1517443204
+0,1,k//eternal,,False,Dream goes on,dreamgoeson,lanota,lanota,0,,Tiny Minim,lanota-light,174,174,1517443200
+1,5,k//eternal,,False,Dream goes on,dreamgoeson,lanota,lanota,0,,Tiny Minim,lanota-light,174,174,1517443200
+2,7,k//eternal,,False,Dream goes on,dreamgoeson,lanota,lanota,0,,Tiny Minim,lanota-light,174,174,1517443200
+0,3,Kurorak,,False,Journey,journey,lanota,lanota,0,,ARForest,lanota-light,200,200,1517443202
+1,6,Kurorak,,False,Journey,journey,lanota,lanota,0,,ARForest,lanota-light,200,200,1517443202
+2,8,Kurorak,,False,Journey,journey,lanota,lanota,0,,ARForest,lanota-light,200,200,1517443202
+0,3,Toaster,,False,Specta,specta,lanota,lanota,0,,Junk,lanota-light,179,179,1517443202
+1,6,Toaster,,False,Specta,specta,lanota,lanota,0,,Junk,lanota-light,179,179,1517443202
+2,9,Toaster,,False,Specta,specta,lanota,lanota,0,,Junk,lanota-light,179,179,1517443202
+0,4,Nitro,シエラ,False,Quon,quon,lanota,lanota,0,,Feryquitous,quon,189,189,1517443203
+1,6,Nitro,シエラ,False,Quon,quon,lanota,lanota,0,,Feryquitous,quon,189,189,1517443203
+2,9,Nitro,シエラ,False,Quon,quon,lanota,lanota,0,,Feryquitous,quon,189,189,1517443203
+0,3,Toaster,RiceGnat,False,Syro,syro,,base,0,,Mitomoro,mirai_light,178,178,1513814401
+1,6,Toaster,RiceGnat,False,Syro,syro,,base,0,,Mitomoro,mirai_light,178,178,1513814401
+2,9,Toaster,RiceGnat,False,Syro,syro,,base,0,,Mitomoro,mirai_light,178,178,1513814401
+0,2,k//eternal,Khronetic,False,Reinvent,reinvent,,base,0,,Sound Souler,,174,174,1513814400
+1,6,k//eternal,Khronetic,False,Reinvent,reinvent,,base,0,,Sound Souler,,174,174,1513814400
+2,8,k//eternal + nitro,Khronetic,False,Reinvent,reinvent,,base,0,,Sound Souler,,174,174,1513814400
+0,2,TaroNuke,CinEraLiA,False,Silent Rush,silentrush,nijuusei,nijuusei,1,,Soleily,nijuusei-conflict-b,158,158,1521763201
+1,5,TaroNuke,CinEraLiA,False,Silent Rush,silentrush,nijuusei,nijuusei,1,,Soleily,nijuusei-conflict-b,158,158,1521763201
+2,8,TaroNuke,CinEraLiA,False,Silent Rush,silentrush,nijuusei,nijuusei,1,,Soleily,nijuusei-conflict-b,158,158,1521763201
+0,4,東星,シエラ,False,Singularity,singularity,nijuusei,nijuusei,1,,ETIA.,nijuusei-conflict-b,175,175,1521763204
+1,7,東星,シエラ,False,Singularity,singularity,nijuusei,nijuusei,1,,ETIA.,nijuusei-conflict-b,175,175,1521763204
+2,10,東星※コラプサー,シエラ,False,Singularity,singularity,nijuusei,nijuusei,1,,ETIA.,nijuusei-conflict-b,175,175,1521763204
+0,3,Kurorak,シエラ,False,Memory Forest,memoryforest,nijuusei,nijuusei,0,,ETIA.,nijuusei-light-b,178,178,1521763203
+1,6,Kurorak,シエラ,False,Memory Forest,memoryforest,nijuusei,nijuusei,0,,ETIA.,nijuusei-light-b,178,178,1521763203
+2,9,Kurorak,シエラ,False,Memory Forest,memoryforest,nijuusei,nijuusei,0,,ETIA.,nijuusei-light-b,178,178,1521763203
+0,2,TaroNuke,八葉,False,Strongholds,strongholds,nijuusei,nijuusei,1,,Yooh,nijuusei-conflict-b,105,210,1521763202
+1,5,TaroNukeΔ,八葉,False,Strongholds,strongholds,nijuusei,nijuusei,1,,Yooh,nijuusei-conflict-b,105,210,1521763202
+2,9,TΔroNuke,八葉,False,Strongholds,strongholds,nijuusei,nijuusei,1,,Yooh,nijuusei-conflict-b,105,210,1521763202
+0,4,Nitro,mins,False,next to you,nexttoyou,nijuusei,nijuusei,0,,uma feat. 橘花音,nijuusei-light-b,165,165,1521763200
+1,7,Nitro,mins,False,next to you,nexttoyou,nijuusei,nijuusei,0,,uma feat. 橘花音,nijuusei-light-b,165,165,1521763200
+2,8,Nitro,mins,False,next to you,nexttoyou,nijuusei,nijuusei,0,,uma feat. 橘花音,nijuusei-light-b,165,165,1521763200
+0,3,Kurorak,nonokuro,False,Metallic Punisher,metallicpunisher,metallicpunisher,single,1,,INNOCENT NOIZE,yugamu,165,165,1518480000
+1,7,Kurorak,nonokuro,False,Metallic Punisher,metallicpunisher,metallicpunisher,single,1,,INNOCENT NOIZE,yugamu,165,165,1518480000
+2,10,Black Tea,nonokuro,False,Metallic Punisher,metallicpunisher,metallicpunisher,single,1,,INNOCENT NOIZE,yugamu,165,165,1518480000
+0,4,k//urorak,LAM,False,Blaster,blaster,,base,1,,Massive New Krew,yugamu,180,180,1520553600
+1,7,k//urorak,LAM,False,Blaster,blaster,,base,1,,Massive New Krew,yugamu,180,180,1520553600
+2,9,k//urorak,LAM,False,Blaster,blaster,,base,1,,Massive New Krew,yugamu,180,180,1520553600
+0,4,τoastεr,姐川 + Khronetic,False,γuarδina,guardina,dynamix,single,0,,Aoi,nijuusei-light-b,202,202,1525305600
+1,7,τoastεr,姐川 + Khronetic,False,γuarδina,guardina,dynamix,single,0,,Aoi,nijuusei-light-b,202,202,1525305600
+2,10,τoastεr,姐川 + Khronetic,False,γuarδina,guardina,dynamix,single,0,,Aoi,nijuusei-light-b,202,202,1525305600
+0,4,週刊Toaster,未早,False,carmine:scythe,carminescythe,carminescythe,single,1,,かゆき,yugamu,165,165,1523516400
+1,7,週刊Toaster,未早,False,carmine:scythe,carminescythe,carminescythe,single,1,,かゆき,yugamu,165,165,1523516400
+2,9,週刊Toaster,未早,False,carmine:scythe,carminescythe,carminescythe,single,1,,かゆき,yugamu,165,165,1523516400
+0,4,Nitro,hie,False,Be There,bethere,bethere,single,0,,PSYQUI,,164,164,1527811201
+1,7,Nitro,hie,False,Be There,bethere,bethere,single,0,,PSYQUI,,164,164,1527811201
+2,9,Be Nitro,hie,False,Be There,bethere,bethere,single,0,,PSYQUI,,164,164,1527811201
+0,4,Kero,mirimo,False,Cybernecia Catharsis,cyberneciacatharsis,,base,1,,Tanchiky,yugamu,184,184,1527811200
+1,7,Kero,mirimo,False,Cybernecia Catharsis,cyberneciacatharsis,,base,1,,Tanchiky,yugamu,184,184,1527811200
+2,9,Kero + Nitro,mirimo,False,Cybernecia Catharsis,cyberneciacatharsis,,base,1,,Tanchiky,yugamu,184,184,1527811200
+0,3,Kurorak,DJ Poyoshi,False,Call My Name feat. Yukacco,callmyname,callmyname,single,0,,Mameyudoufu,shiawase,175,175,1529539201
+1,6,Kurorak,DJ Poyoshi,False,Call My Name feat. Yukacco,callmyname,callmyname,single,0,,Mameyudoufu,shiawase,175,175,1529539201
+2,8,Kuro my Nitro,DJ Poyoshi,False,Call My Name feat. Yukacco,callmyname,callmyname,single,0,,Mameyudoufu,shiawase,175,175,1529539201
+0,2,Kurorak,Ancy,False,inkar-usi,inkarusi,,base,0,,DIA,,102,102,1529539200
+1,4,Kurorak,Ancy,False,inkar-usi,inkarusi,,base,0,,DIA,,102,102,1529539200
+2,7,Kurorak,Ancy,False,inkar-usi,inkarusi,,base,0,,DIA,,102,102,1529539200
+0,3,小東星,アリスシャッハと魔法の楽団,False,Maze No.9|九番目の迷路,mazenine,rei,rei,0,,アリスシャッハと魔法の楽団,rei,159,159,1531699203
+1,3,小東星,アリスシャッハと魔法の楽団,False,Maze No.9|九番目の迷路,mazenine,rei,rei,0,,アリスシャッハと魔法の楽団,rei,159,159,1531699203
+2,8,小東星,アリスシャッハと魔法の楽団,False,Maze No.9|九番目の迷路,mazenine,rei,rei,0,,アリスシャッハと魔法の楽団,rei,159,159,1531699203
+0,3,Toaster,Shionty + Khronetic,False,The Message,themessage,rei,rei,0,,Jun Kuroda,rei,202,202,1531699204
+1,6,Toaster,Shionty + Khronetic,False,The Message,themessage,rei,rei,0,,Jun Kuroda,rei,202,202,1531699204
+2,9,Toaster,Shionty + Khronetic,False,The Message,themessage,rei,rei,0,,Jun Kuroda,rei,202,202,1531699204
+0,4,Shirorak,すずなし,False,Sulfur,sulfur,rei,rei,0,,ぺのれり,rei,182,182,1531699205
+1,6,Shirorak,すずなし,False,Sulfur,sulfur,rei,rei,0,,ぺのれり,rei,182,182,1531699205
+2,9,Shirorak,すずなし,False,Sulfur,sulfur,rei,rei,0,,ぺのれり,rei,182,182,1531699205
+0,5,東星※太陽,,False,Halcyon,halcyon,rei,rei,0,,xi,rei,191,191,1531699206
+1,8,東星※太陽,,False,Halcyon,halcyon,rei,rei,0,,xi,rei,191,191,1531699206
+2,10,東星※太陽,,False,Halcyon,halcyon,rei,rei,0,,xi,rei,191,191,1531699206
+0,5,Zero Sky,シエラ,False,Ether Strike,etherstrike,rei,rei,0,,Akira Complex,etherstrike,156,156,1531699207
+1,8,Zero Sky,シエラ,False,Ether Strike,etherstrike,rei,rei,0,,Akira Complex,etherstrike,156,156,1531699207
+2,10,Zero Sky,シエラ,False,Ether Strike,etherstrike,rei,rei,0,,Akira Complex,etherstrike,156,156,1531699207
+0,6,Volatile Paradox,シエラ,False,Fracture Ray,fractureray,rei,rei,0,,Sakuzyo,fractureray,200,200,1531699208
+1,9,Absolute Paradox,シエラ,False,Fracture Ray,fractureray,rei,rei,0,,Sakuzyo,fractureray,200,200,1531699208
+2,11,Paradox Zero,シエラ,False,Fracture Ray,fractureray,rei,rei,0,,Sakuzyo,fractureray,200,200,1531699208
+0,2,Toastie,雨風雪夏,False,Suomi,suomi,,base,0,,Aire,nijuusei-light-b,125,125,1531699200
+1,5,Toastie,雨風雪夏,False,Suomi,suomi,,base,0,,Aire,nijuusei-light-b,125,125,1531699200
+2,7,Toastie,雨風雪夏,False,Suomi,suomi,,base,0,,Aire,nijuusei-light-b,125,125,1531699200
+0,4,Kurorak,,False,Bookmaker (2D Version),bookmaker,,base,1,,Kobaryo,yugamu,175,175,1531699201
+1,6,Kurorak,,False,Bookmaker (2D Version),bookmaker,,base,1,,Kobaryo,yugamu,175,175,1531699201
+2,8,Kurorak,,False,Bookmaker (2D Version),bookmaker,,base,1,,Kobaryo,yugamu,175,175,1531699201
+0,2,k//eternal,Illegal Khronetic,False,Illegal Paradise|堕楽の園,darakunosono,,base,1,,gmtn. (witch's slave),,168,168,1531699202
+1,7,k//eternal,Illegal Khronetic,False,Illegal Paradise|堕楽の園,darakunosono,,base,1,,gmtn. (witch's slave),,168,168,1531699202
+2,9,k//eternal + nitro,Illegal Khronetic,False,Illegal Paradise|堕楽の園,darakunosono,,base,1,,gmtn. (witch's slave),,168,168,1531699202
+0,1,-chartaesthesia-
+LIMITER:10%,Hanamori Hiro,False,dropdead,dropdead,dropdead,single,1,,Frums,,50,200,1533859201
+1,9,-chartaesthesia-
+LIMITER:100%,Hanamori Hiro,False,dropdead,dropdead,dropdead,single,1,,Frums,,50,200,1533859201
+2,8,-chartaesthesia-
+LIMITER:25% (OVERDRIVE:+100%),Hanamori Hiro,False,dropdead,dropdead,dropdead,single,1,,Frums,,50,200,1533859201
+0,3,Haruba,unKn,False,Fallensquare,fallensquare,fallensquare,single,1,,Silentroom,mirai_conflict,99,180,1533859202
+1,7,Haruba,unKn,False,Fallensquare,fallensquare,fallensquare,single,1,,Silentroom,mirai_conflict,99,180,1533859202
+2,9,Haruba,unKn,False,Fallensquare,fallensquare,fallensquare,single,1,,Silentroom,mirai_conflict,99,180,1533859202
+0,3,Nitro「Katastrophe」,駿,False,Nhelv,nhelv,,base,1,,Silentroom,lethaeus,174.59,174.59,1533859200
+1,6,Nitro「Katastrophe」,駿,False,Nhelv,nhelv,,base,1,,Silentroom,lethaeus,174.59,174.59,1533859200
+2,9,Nitro「Katastrophe」,駿,False,Nhelv,nhelv,,base,1,,Silentroom,lethaeus,174.59,174.59,1533859200
+0,3,月刊Toaster,hideo,False,LunarOrbit -believe in the Espebranch road-|白道、多希望羊と信じありく。,espebranch,,base,1,,Apo11o program ft. 大瀬良あい,mirai_conflict,192,192,1535673600
+1,6,月刊Toaster,hideo,False,LunarOrbit -believe in the Espebranch road-|白道、多希望羊と信じありく。,espebranch,,base,1,,Apo11o program ft. 大瀬良あい,mirai_conflict,192,192,1535673600
+2,9,月刊Toaster,hideo,False,LunarOrbit -believe in the Espebranch road-|白道、多希望羊と信じありく。,espebranch,,base,1,,Apo11o program ft. 大瀬良あい,mirai_conflict,192,192,1535673600
+0,2,Kurorak,お月さま交響曲,False,Purgatorium,purgatorium,,base,1,,お月さま交響曲,,150,150,1537142400
+1,6,Kurorak,お月さま交響曲,False,Purgatorium,purgatorium,,base,1,,お月さま交響曲,,150,150,1537142400
+2,8,Kurorak,お月さま交響曲,False,Purgatorium,purgatorium,,base,1,,お月さま交響曲,,150,150,1537142400
+0,2,OptoNuke,,False,Hikari|光,hikari,tonesphere,tonesphere,1,,THB,tonesphere-darksphere,130,130,1538870400
+1,6,OptoNuke,,False,Hikari|光,hikari,tonesphere,tonesphere,1,,THB,tonesphere-darksphere,130,130,1538870400
+2,8,OptoNuke,,False,Hikari|光,hikari,tonesphere,tonesphere,1,,THB,tonesphere-darksphere,130,130,1538870400
+0,3,KURORAK,,False,STAGER (ALL STAGE CLEAR),stager,tonesphere,tonesphere,0,,Ras,tonesphere-solarsphere,145,145,1538870402
+1,6,KURORAK,,False,STAGER (ALL STAGE CLEAR),stager,tonesphere,tonesphere,0,,Ras,tonesphere-solarsphere,145,145,1538870402
+2,9,KURORAK,,False,STAGER (ALL STAGE CLEAR),stager,tonesphere,tonesphere,0,,Ras,tonesphere-solarsphere,145,145,1538870402
+0,3,Toaster,,False,Hall of Mirrors,hallofmirrors,tonesphere,tonesphere,1,,Sta,tonesphere-darksphere,147,147.01,1538870401
+1,5,Toaster,,False,Hall of Mirrors,hallofmirrors,tonesphere,tonesphere,1,,Sta,tonesphere-darksphere,147,147.01,1538870401
+2,8,Toaster,,False,Hall of Mirrors,hallofmirrors,tonesphere,tonesphere,1,,Sta,tonesphere-darksphere,147,147.01,1538870401
+0,2,THE TOAST,,False,Linear Accelerator,linearaccelerator,tonesphere,tonesphere,0,,THE SHAFT,tonesphere-solarsphere,200 - 211.9,200,1538870403
+1,6,THE TOAST,,False,Linear Accelerator,linearaccelerator,tonesphere,tonesphere,0,,THE SHAFT,tonesphere-solarsphere,200 - 211.9,200,1538870403
+2,9,THE TOAST,,False,Linear Accelerator,linearaccelerator,tonesphere,tonesphere,0,,THE SHAFT,tonesphere-solarsphere,200 - 211.9,200,1538870403
+0,4,夜浪[Spherical],,False,Tiferet,tiferet,tonesphere,tonesphere,1,,xi + Sta,tiferet,140?,140,1538870404
+1,7,夜浪[Spherical],,False,Tiferet,tiferet,tonesphere,tonesphere,1,,xi + Sta,tiferet,140?,140,1538870404
+2,10,夜浪[Spherical],,False,Tiferet,tiferet,tonesphere,tonesphere,1,,xi + Sta,tiferet,140?,140,1538870404
+0,4,東星※空の宝石,シエラ,False,Alexandrite,alexandrite,alexandrite,single,1,,WAiKURO,alexandrite,146,146,1537142401
+1,7,東星※空の宝石,シエラ,False,Alexandrite,alexandrite,alexandrite,single,1,,WAiKURO,alexandrite,146,146,1537142401
+2,9,東星※空の宝石,シエラ,False,Alexandrite,alexandrite,alexandrite,single,1,,WAiKURO,alexandrite,146,146,1537142401
+0,3,k//urorak,,False,Rugie,rugie,,base,1,,Feryquitous feat.Sennzai,,191,191,1541635200
+1,6,k//urorak,,False,Rugie,rugie,,base,1,,Feryquitous feat.Sennzai,,191,191,1541635200
+2,9,k//urorak,,False,Rugie,rugie,,base,1,,Feryquitous feat.Sennzai,,191,191,1541635200
+0,4,Nitro,岩十,False,Astral tale,astraltale,astraltale,single,1,,Noah,nijuusei-conflict-b,134,134,1541635201
+1,7,Nitro,岩十,False,Astral tale,astraltale,astraltale,single,1,,Noah,nijuusei-conflict-b,134,134,1541635201
+2,9,Nitro,岩十,False,Astral tale,astraltale,astraltale,single,1,,Noah,nijuusei-conflict-b,134,134,1541635201
+0,4,Toaster,そゐち,False,Phantasia,phantasia,phantasia,single,0,,Yunosuke,rei,153,153,1543449600
+1,5,Toaster,そゐち,False,Phantasia,phantasia,phantasia,single,0,,Yunosuke,rei,153,153,1543449600
+2,9,Toaster,そゐち,False,Phantasia,phantasia,phantasia,single,0,,Yunosuke,rei,153,153,1543449600
+0,3,0°Nitro,シエラ + Khronetic,False,Empire of Winter,empireofwinter,empireofwinter,single,0,,Street,nijuusei-light-b,175,175,1545523200
+1,6,0°Nitro,シエラ + Khronetic,False,Empire of Winter,empireofwinter,empireofwinter,single,0,,Street,nijuusei-light-b,175,175,1545523200
+2,9,0°Nitro,シエラ + Khronetic,False,Empire of Winter,empireofwinter,empireofwinter,single,0,,Street,nijuusei-light-b,175,175,1545523200
+0,3,Got More Taro?,,False,MERLIN,merlin,groovecoaster,groovecoaster,0,,REDALiCE,gc_light,180,180,1546992000
+1,5,Got More Taro?,,False,MERLIN,merlin,groovecoaster,groovecoaster,0,,REDALiCE,gc_light,180,180,1546992000
+2,8,Got More Taro?,,False,MERLIN,merlin,groovecoaster,groovecoaster,0,,REDALiCE,gc_light,180,180,1546992000
+0,3,DX譜面作者フルメタルNitro,,False,DX Choseinou Full Metal Shojo|DX超性能フルメタル少女,dxfullmetal,groovecoaster,groovecoaster,0,,IOSYS TRAX (uno with.ちよこ),gc_light,160,160,1546992001
+1,6,DX譜面作者フルメタルNitro,,False,DX Choseinou Full Metal Shojo|DX超性能フルメタル少女,dxfullmetal,groovecoaster,groovecoaster,0,,IOSYS TRAX (uno with.ちよこ),gc_light,160,160,1546992001
+2,9,DX譜面作者フルメタルNitro,,False,DX Choseinou Full Metal Shojo|DX超性能フルメタル少女,dxfullmetal,groovecoaster,groovecoaster,0,,IOSYS TRAX (uno with.ちよこ),gc_light,160,160,1546992001
+0,3,Kurorak,,False,OMAKENO Stroke,omakeno,groovecoaster,groovecoaster,1,,t+pazolite,gc_conflict,240,240,1546992002
+1,6,Kurorak,,False,OMAKENO Stroke,omakeno,groovecoaster,groovecoaster,1,,t+pazolite,gc_conflict,240,240,1546992002
+2,9,Kurorak,,False,OMAKENO Stroke,omakeno,groovecoaster,groovecoaster,1,,t+pazolite,gc_conflict,240,240,1546992002
+0,4,闇運,,False,Scarlet Lance,scarletlance,groovecoaster,groovecoaster,0,,MASAKI (ZUNTATA),gc_lance,185,185,1546992003
+1,7,闇運,,False,Scarlet Lance,scarletlance,groovecoaster,groovecoaster,0,,MASAKI (ZUNTATA),gc_lance,185,185,1546992003
+2,10,闇運,,False,Scarlet Lance,scarletlance,groovecoaster,groovecoaster,0,,MASAKI (ZUNTATA),gc_lance,185,185,1546992003
+0,4,Groove 東星,,False,ouroboros -twin stroke of the end-,ouroboros,groovecoaster,groovecoaster,1,,Cranky VS MASAKI,gc_ouroboros,188,188,1546992004
+1,7,Groove 東星,,False,ouroboros -twin stroke of the end-,ouroboros,groovecoaster,groovecoaster,1,,Cranky VS MASAKI,gc_ouroboros,188,188,1546992004
+2,10,Groove 東星,,False,ouroboros -twin stroke of the end-,ouroboros,groovecoaster,groovecoaster,1,,Cranky VS MASAKI,gc_ouroboros,188,188,1546992004
+0,3,Kurorak,wacca,False,Libertas,libertas,libertas,single,0,,Zekk,single_light,160,160,1549843200
+1,5,Kurorak,wacca,False,Libertas,libertas,libertas,single,0,,Zekk,single_light,160,160,1549843200
+2,9,Kurorak + Nitro,wacca,False,Libertas,libertas,libertas,single,0,,Zekk,single_light,160,160,1549843200
+0,4,,シエラ,False,Solitary Dream|虚空の夢,solitarydream,core,core,0,,ak+q feat. Sennzai,solitarydream,162,162,1552089600
+1,7,,シエラ,False,Solitary Dream|虚空の夢,solitarydream,core,core,0,,ak+q feat. Sennzai,solitarydream,162,162,1552089600
+2,8,,シエラ,False,Solitary Dream|虚空の夢,solitarydream,core,core,0,,ak+q feat. Sennzai,solitarydream,162,162,1552089600
+0,2,chaos//engine,釜飯轟々丸 + Khronetic,False,Antithese,antithese,zettai,zettai,1,,Blacklolita,zettai,172,172,1553126402
+1,5,chaos//engine,釜飯轟々丸 + Khronetic,False,Antithese,antithese,zettai,zettai,1,,Blacklolita,zettai,172,172,1553126402
+2,8,chaos//engine,釜飯轟々丸 + Khronetic,False,Antithese,antithese,zettai,zettai,1,,Blacklolita,zettai,172,172,1553126402
+0,3,₸öα$†ε₹,BerryVerrine,False,Corruption,corruption,zettai,zettai,1,,3R2,zettai,170,170,1553126404
+1,6,₸öα$†ε₹,BerryVerrine,False,Corruption,corruption,zettai,zettai,1,,3R2,zettai,170,170,1553126404
+2,9,₸öα$†ε₹,BerryVerrine,False,Corruption,corruption,zettai,zettai,1,,3R2,zettai,170,170,1553126404
+0,3,NitroNukeδ,トロ3,False,Black Territory,blackterritory,zettai,zettai,1,,DJ Myosuke,zettai,200,200,1553126403
+1,7,NitroNukeδ,トロ3,False,Black Territory,blackterritory,zettai,zettai,1,,DJ Myosuke,zettai,200,200,1553126403
+2,9,NitroNukeδ,トロ3,False,Black Territory,blackterritory,zettai,zettai,1,,DJ Myosuke,zettai,200,200,1553126403
+0,4,Nitro vanquish Toaster.,吠L,False,Vicious Heroism,viciousheroism,zettai,zettai,1,,Kobaryo,zettai,256,256,1553126405
+1,7,Nitro vanquish Toaster.,吠L,False,Vicious Heroism,viciousheroism,zettai,zettai,1,,Kobaryo,zettai,256,256,1553126405
+2,9,Nitro vanquish Toaster.,吠L,False,Vicious Heroism,viciousheroism,zettai,zettai,1,,Kobaryo,zettai,256,256,1553126405
+0,5,夜浪、旧支配者,シエラ,False,Cyaegha,cyaegha,zettai,zettai,1,,USAO,cyaegha,200,200,1553126406
+1,8,夜浪、旧支配者,シエラ,False,Cyaegha,cyaegha,zettai,zettai,1,,USAO,cyaegha,200,200,1553126406
+2,10,夜浪、旧支配者,シエラ,False,Cyaegha,cyaegha,zettai,zettai,1,,USAO,cyaegha,200,200,1553126406
+0,3,Revoke Kurorak,出前,False,ReviXy,revixy,,base,1,,ikaruga_nex,,115-185,185,1553126401
+1,6,Revoke Kurorak,出前,False,ReviXy,revixy,,base,1,,ikaruga_nex,,115-185,185,1553126401
+2,8,Revoke Kurorak,出前,False,ReviXy,revixy,,base,1,,ikaruga_nex,,115-185,185,1553126401
+0,2,Toaster,,False,Grimheart,grimheart,,base,0,,Puru,rei,170,170,1553126400
+1,5,Toaster,,False,Grimheart,grimheart,,base,0,,Puru,rei,170,170,1553126400
+2,8,Toaster,,False,Grimheart,grimheart,,base,0,,Puru,rei,170,170,1553126400
+0,3,Nitro,ふぇいフリック,False,VECTOЯ,vector,,base,1,,WHITEFISTS,mirai_conflict,200,200,1556755200
+1,7,Nitro,ふぇいフリック,False,VECTOЯ,vector,,base,1,,WHITEFISTS,mirai_conflict,200,200,1556755200
+2,9,Nitro,ふぇいフリック,False,VECTOЯ,vector,,base,1,,WHITEFISTS,mirai_conflict,200,200,1556755200
+0,3,東超新星,Khronetic,False,SUPERNOVA,supernova,,base,1,,BACO,nijuusei-conflict-b,150,150,1556755201
+1,6,東超新星,Khronetic,False,SUPERNOVA,supernova,,base,1,,BACO,nijuusei-conflict-b,150,150,1556755201
+2,9,東超新星,Khronetic,False,SUPERNOVA,supernova,,base,1,,BACO,nijuusei-conflict-b,150,150,1556755201
+0,3,•Nitro•,DJ Poyoshi,False,Dot to Dot feat. shully,dottodot,dottodot,single,0,,Mameyudoufu,mirai_light,174,174,1556755202
+1,6,•Nitro•,DJ Poyoshi,False,Dot to Dot feat. shully,dottodot,dottodot,single,0,,Mameyudoufu,mirai_light,174,174,1556755202
+2,8,•Nitro•,DJ Poyoshi,False,Dot to Dot feat. shully,dottodot,dottodot,single,0,,Mameyudoufu,mirai_light,174,174,1556755202
+0,4,Arcaea Charting Team【Royal Flush】,,False,Garakuta Doll Play,garakuta,chunithm,chunithm,1,,t+pazolite,chuni-garakuta,256,256,1558573200
+1,6,Arcaea Charting Team【Royal Flush】,,False,Garakuta Doll Play,garakuta,chunithm,chunithm,1,,t+pazolite,chuni-garakuta,256,256,1558573200
+2,10,Arcaea Charting Teamからの挑戦状 ,,False,Garakuta Doll Play,garakuta,chunithm,chunithm,1,,t+pazolite,chuni-garakuta,256,256,1558573200
+0,3,先史の機械神【夜浪】,,False,Ikazuchi|怒槌,ikazuchi,chunithm,chunithm,1,,光吉猛修,chuni-ikazuchi,200,200,1558573201
+1,7,先史の機械神【夜浪】,,False,Ikazuchi|怒槌,ikazuchi,chunithm,chunithm,1,,光吉猛修,chuni-ikazuchi,200,200,1558573201
+2,10,先史の機械神【夜浪】,,False,Ikazuchi|怒槌,ikazuchi,chunithm,chunithm,1,,光吉猛修,chuni-ikazuchi,200,200,1558573201
+0,2,処刑人【東星】,,False,World Vanquisher,worldvanquisher,chunithm,chunithm,0,,void (Mournfinale),chuni-worldvanquisher,170,170,1558573202
+1,5,処刑人【東星】,,False,World Vanquisher,worldvanquisher,chunithm,chunithm,0,,void (Mournfinale),chuni-worldvanquisher,170,170,1558573202
+2,10,処刑人【東星】,,False,World Vanquisher,worldvanquisher,chunithm,chunithm,0,,void (Mournfinale),chuni-worldvanquisher,170,170,1558573202
+0,4,Nitro,,False,Dreadnought,dreadnought,dreadnought,single,1,,Mastermind (xi + nora2r),nijuusei-conflict-b,96-384,192,1563408000
+1,7,Nitro,,False,Dreadnought,dreadnought,dreadnought,single,1,,Mastermind (xi + nora2r),nijuusei-conflict-b,96-384,192,1563408000
+2,9,Astronomer (Toaster + 東星),,False,Dreadnought,dreadnought,dreadnought,single,1,,Mastermind (xi + nora2r),nijuusei-conflict-b,96-384,192,1563408000
+0,3,小東星,,False,Particle Arts,particlearts,prelude,prelude,1,,Virtual Self,prelude_conflict,162-175,175,1563408001
+1,6,小東星,,False,Particle Arts,particlearts,prelude,prelude,1,,Virtual Self,prelude_conflict,162-175,175,1563408001
+2,8,小東星,,False,Particle Arts,particlearts,prelude,prelude,1,,Virtual Self,prelude_conflict,162-175,175,1563408001
+0,4,Toaster,EB十,False,Vindication,vindication,prelude,prelude,0,,Laur,prelude_light,174,174,1563408002
+1,6,Toaster,EB十,False,Vindication,vindication,prelude,prelude,0,,Laur,prelude_light,174,174,1563408002
+2,9,Nitro vs Toaster,EB十,False,Vindication,vindication,prelude,prelude,0,,Laur,prelude_light,174,174,1563408002
+0,4,Kurorak,yusi. + Khronetic,False,Heavensdoor,heavensdoor,prelude,prelude,1,,LeaF,prelude_conflict,240,240,1563408003
+1,7,Kurorak,yusi. + Khronetic,False,Heavensdoor,heavensdoor,prelude,prelude,1,,LeaF,prelude_conflict,240,240,1563408003
+2,9,Black Tea,yusi. + Khronetic,False,Heavensdoor,heavensdoor,prelude,prelude,1,,LeaF,prelude_conflict,240,240,1563408003
+0,5,夜浪 vs Nitro,シエラ,False,Ringed Genesis,ringedgenesis,prelude,prelude,0,,Edelritter,ringedgenesis,160,160,1563408004
+1,8,夜浪 vs Nitro,シエラ,False,Ringed Genesis,ringedgenesis,prelude,prelude,0,,Edelritter,ringedgenesis,160,160,1563408004
+2,10,夜浪 vs Nitro,シエラ,False,Ringed Genesis,ringedgenesis,prelude,prelude,0,,Edelritter,ringedgenesis,160,160,1563408004
+0,3,TaroNuke,Refla,False,Chelsea,chelsea,omatsuri,omatsuri,0,,7mai,omatsuri_light,174,174,1566432000
+1,6,TaroNuke,Refla,False,Chelsea,chelsea,omatsuri,omatsuri,0,,7mai,omatsuri_light,174,174,1566432000
+2,8,TaroNuke,Refla,False,Chelsea,chelsea,omatsuri,omatsuri,0,,7mai,omatsuri_light,174,174,1566432000
+0,3,N[I]TRO,SiNoe,False,AI[UE]OON,aiueoon,omatsuri,omatsuri,0,,MYUKKE.,omatsuri_light,145,145,1566432001
+1,6,N[I]TRO,SiNoe,False,AI[UE]OON,aiueoon,omatsuri,omatsuri,0,,MYUKKE.,omatsuri_light,145,145,1566432001
+2,9,N[I]TRO,SiNoe,False,AI[UE]OON,aiueoon,omatsuri,omatsuri,0,,MYUKKE.,omatsuri_light,145,145,1566432001
+0,3,恋のToaster,シエラ,False,A Wandering Melody of Love|迷える音色は恋の唄,melodyoflove,omatsuri,omatsuri,0,,からとPαnchii少年 feat.はるの,omatsuri_light,165,165,1566432002
+1,7,恋のToaster,シエラ,False,A Wandering Melody of Love|迷える音色は恋の唄,melodyoflove,omatsuri,omatsuri,0,,からとPαnchii少年 feat.はるの,omatsuri_light,165,165,1566432002
+2,9,恋のToaster,シエラ,False,A Wandering Melody of Love|迷える音色は恋の唄,melodyoflove,omatsuri,omatsuri,0,,からとPαnchii少年 feat.はるの,omatsuri_light,165,165,1566432002
+0,3,Kurorak,kobuta,False,Tie me down gently,tiemedowngently,omatsuri,omatsuri,1,,溝口ゆうま feat. 大瀬良あい,omatsuri_conflict,191,191,1566432003
+1,5,Kurorak,kobuta,False,Tie me down gently,tiemedowngently,omatsuri,omatsuri,1,,溝口ゆうま feat. 大瀬良あい,omatsuri_conflict,191,191,1566432003
+2,8,Kurorak,kobuta,False,Tie me down gently,tiemedowngently,omatsuri,omatsuri,1,,溝口ゆうま feat. 大瀬良あい,omatsuri_conflict,191,191,1566432003
+0,4,夜浪,すずなし,False,Valhalla:0,valhallazero,omatsuri,omatsuri,1,,Juggernaut.,omatsuri_conflict,200,200,1566432004
+1,7,夜浪,すずなし,False,Valhalla:0,valhallazero,omatsuri,omatsuri,1,,Juggernaut.,omatsuri_conflict,200,200,1566432004
+2,10,夜浪,すずなし,False,Valhalla:0,valhallazero,omatsuri,omatsuri,1,,Juggernaut.,omatsuri_conflict,200,200,1566432004
+0,4,東星※おおいぬ座β星,すずなし,False,Mirzam,mirzam,mirzam,single,1,,Aoi vs. siqlo,zettai,201,201,1568246400
+1,7,東星※おおいぬ座β星,すずなし,False,Mirzam,mirzam,mirzam,single,1,,Aoi vs. siqlo,zettai,201,201,1568246400
+2,9,東星※おおいぬ座β星,すずなし,False,Mirzam,mirzam,mirzam,single,1,,Aoi vs. siqlo,zettai,201,201,1568246400

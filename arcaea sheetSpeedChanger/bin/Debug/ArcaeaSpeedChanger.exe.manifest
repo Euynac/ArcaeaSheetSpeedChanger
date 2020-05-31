@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ArcaeaSpeedChanger.exe" size="2595800">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ArcaeaSpeedChanger.exe" size="2597848">
       <assemblyIdentity name="ArcaeaSpeedChanger" version="3.4.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TEk/dix23rzBzpqeOOlubue0cUeIaQkFfjA2y5Hl8i4=</dsig:DigestValue>
+        <dsig:DigestValue>iKwx/T5c4N7M2Fnf67+MMYEbeZgWNdQkgT01CUdW19I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

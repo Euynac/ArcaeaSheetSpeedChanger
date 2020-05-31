@@ -42,6 +42,7 @@
             this.rapidPackCheckBox = new System.Windows.Forms.CheckBox();
             this.combineJsonBtn = new MetroFramework.Controls.MetroButton();
             this.arcaoidCheckBox = new System.Windows.Forms.CheckBox();
+            this.generateSqlDataBtn = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // openFileButton
@@ -192,6 +193,17 @@
             this.arcaoidCheckBox.UseVisualStyleBackColor = false;
             this.arcaoidCheckBox.CheckedChanged += new System.EventHandler(this.ArcaoidCheckBox_CheckedChanged);
             // 
+            // generateSqlDataBtn
+            // 
+            this.generateSqlDataBtn.BackColor = System.Drawing.Color.Transparent;
+            this.generateSqlDataBtn.Location = new System.Drawing.Point(710, 517);
+            this.generateSqlDataBtn.Name = "generateSqlDataBtn";
+            this.generateSqlDataBtn.Size = new System.Drawing.Size(116, 22);
+            this.generateSqlDataBtn.TabIndex = 23;
+            this.generateSqlDataBtn.Text = "生成数据库数据";
+            this.generateSqlDataBtn.UseSelectable = true;
+            this.generateSqlDataBtn.Click += new System.EventHandler(this.GenerateSqlDataBtn_Click);
+            // 
             // SheetChanger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -200,6 +212,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(942, 629);
             this.ControlBox = false;
+            this.Controls.Add(this.generateSqlDataBtn);
             this.Controls.Add(this.arcaoidCheckBox);
             this.Controls.Add(this.combineJsonBtn);
             this.Controls.Add(this.rapidPackCheckBox);
@@ -240,6 +253,7 @@
         private System.Windows.Forms.CheckBox rapidPackCheckBox;
         private MetroFramework.Controls.MetroButton combineJsonBtn;
         private System.Windows.Forms.CheckBox arcaoidCheckBox;
+        private MetroFramework.Controls.MetroButton generateSqlDataBtn;
     }
 }
 

@@ -14,6 +14,10 @@ namespace Arcaea.Song
             /// 
             /// </summary>
             public string en { get; set; }
+            /// <summary>
+            /// 
+            /// </summary>
+            public string ja { get; set; }
         }
 
         public class DifficultiesItem
@@ -27,7 +31,7 @@ namespace Arcaea.Song
             /// </summary>
             public string chartDesigner { get; set; }
             /// <summary>
-            /// c7肘
+            /// 
             /// </summary>
             public string jacketDesigner { get; set; }
             /// <summary>
@@ -37,7 +41,7 @@ namespace Arcaea.Song
             /// <summary>
             /// 
             /// </summary>
-            public int plusFingers { get; set; } //bug太多
+            public bool plusFingers { get; set; }
         }
 
         public class SongsItem
@@ -51,7 +55,7 @@ namespace Arcaea.Song
             /// </summary>
             public Title_localized title_localized { get; set; }
             /// <summary>
-            /// 少女フラクタル
+            /// 
             /// </summary>
             public string artist { get; set; }
             /// <summary>
@@ -93,8 +97,13 @@ namespace Arcaea.Song
             /// <summary>
             /// 
             /// </summary>
+            public string version { get; set; }
+            /// <summary>
+            /// 
+            /// </summary>
             public List<DifficultiesItem> difficulties { get; set; }
         }
+
         public class Root
         {
             /// <summary>
@@ -130,6 +139,26 @@ namespace Arcaea.Song
                 return songsMap.ContainsKey(originSongID);
             }
 
+            /// <summary>
+            /// 生成所有谱面数据（用于数据库）
+            /// </summary>
+            /// <returns></returns>
+            public StringBuilder GenerateAllSongData()//按照难度分的
+            {
+                StringBuilder songdata = new StringBuilder();
+                foreach (var pair in songsMap)
+                {
+                    var song = pair.Value;
+                    foreach (var difficult in song.difficulties)
+                    {
+                        songdata.Append($"{difficult.ratingClass},{difficult.rating},{difficult.chartDesigner},{difficult.jacketDesigner},{difficult.plusFingers},");
+                        songdata.Append(!string.IsNullOrEmpty(song.title_localized.ja) ? $"{song.title_localized.en}|{song.title_localized.ja}" : $"{song.title_localized.en}");
+                        songdata.Append($",{song.id},{song.purchase},{song.set},{song.side},{song.version},{song.artist},{song.bg},{song.bpm},{song.bpm_base},{song.date}");
+                        songdata.Append("\n");
+                    }
+                }
+                return songdata;
+            }
             public StringBuilder RapidGenerateArcaoid(string originSongID, string speed, string songID, string songName, bool randomFun = false)
             {
                 string songTitle = songName;
@@ -217,19 +246,19 @@ namespace Arcaea.Song
                 past.chartDesigner = "Arcaea";
                 past.jacketDesigner = "lowrio";
                 past.rating = 1;
-                past.plusFingers = 0;
+                past.plusFingers = false;
                 DifficultiesItem present = new DifficultiesItem();
                 present.ratingClass = 1;
                 present.chartDesigner = prsChartDesigner;
                 present.jacketDesigner = prsJacketDesigner;
                 present.rating = prsRating;
-                present.plusFingers = 0;
+                present.plusFingers = false;
                 DifficultiesItem future = new DifficultiesItem();
                 future.ratingClass = 2;
                 future.chartDesigner = ftrChartDesigner;
                 future.jacketDesigner = ftrJacketDesigner;
                 future.rating = ftrRating;
-                future.plusFingers = 0;
+                future.plusFingers = false;
                 difficulties.Add(past);
                 difficulties.Add(present);
                 difficulties.Add(future);

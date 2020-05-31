@@ -129,6 +129,20 @@ namespace ArcaeaSpeedChanger
         #endregion
 
         #region 界面控件事件操作
+
+        private void GenerateSqlDataBtn_Click(object sender, EventArgs e)
+        {
+            if (!songListGenerator.OpenSonglist("songlist"))
+            {
+                ShowArcaeaDialog("songlist文件不存在！");
+            }
+            else
+            {
+                ShowArcaeaDialog("成功导入songlist文件，将按songlist信息生成");
+                EuyFile.WriteFile("SongData.txt", songListGenerator.GenerateAllSongData());
+                ShowArcaeaDialog("歌曲数据生成成功！");
+            }
+        }
         private void CombineJsonBtn_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -725,6 +739,7 @@ namespace ArcaeaSpeedChanger
             //MessageBox.Show("啊咧？被您找到BUG了...联系七奏870838080 协助修复BUG" + Environment.NewLine + "错误信息:" + e.Message);
             ShowArcaeaDialog("啊咧？被您找到BUG了..." + Environment.NewLine + "欢迎联系七奏QQ870838080协助修复");
         }
+
 
         #endregion
 
