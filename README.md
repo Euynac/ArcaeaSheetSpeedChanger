@@ -108,12 +108,4 @@ plusFinger字段 在arcaea v2.3.2版本以后似乎变为了bool类型字段，�
 
 [NAudio.Vorbis](https://github.com/naudio/Vorbis "NAudio.Vorbis")
 
-## 吐槽
 
-初学C# 继Hello World后的第二个C#Winform程序
-
-尝试美化界面完后才发现wpf做界面方便多了 后悔sl（
-
-肯定会有很多bug⑧
-
-有建议或者bug联系七奏QQ870838080
